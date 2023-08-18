@@ -1,1028 +1,742 @@
 <!DOCTYPE html>
-<html>
-
+<html class="no-js" lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
 
-  <title>HandTime</title>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Ceevee 2.0</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/vendor.css">
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- script
+    ================================================== -->
+    <script defer src="js/vendor/fontawesome/all.min.js"></script>
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 
 </head>
 
-<body>
+<body id="top" class="ss-preload">
 
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              HandTime
-            </span>
-          </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="product.html">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="testimonial.html">Testimonial</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-            <div class="user_optio_box">
-              <a href="">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              </a>
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+        <div class="row s-header__nav-wrap">
+            <nav class="s-header__nav">
+                <ul>
+                    <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
+                    <li><a class="smoothscroll" href="#about">About</a></li>
+                    <li><a class="smoothscroll" href="#resume">Resume</a></li>
+                    <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+                    <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+                    <li><a class="smoothscroll" href="#contact">Say Hello</a></li>
+                </ul>
+            </nav>
+        </div> <!-- end row -->
+        
+        <a class="s-header__menu-toggle" href="#0" title="Menu">
+            <span class="s-header__menu-icon"></span>
+        </a>
+    </header> <!-- end s-header -->
+
+
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section">
+
+        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
+
+        <div class="row s-hero__content">
+            <div class="column">
+
+                <div class="s-hero__content-about">
+
+                    <h1>I'm Jonathan Doe.</h1>
+
+                    <h3>
+                    I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
+                    effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
+                    and learn more <a class="smoothscroll" href="#about">about me</a>.
+                    </h3>
+
+                    <div class="s-hero__content-social">
+                        <a href="#0"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+
+                </div> <!-- end s-hero__content-about -->
+
             </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div class="slider_bg_box">
-        <img src="images/slider-bg.jpg" alt="">
-      </div>
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      Stylish Watches
-                    </h1>
+        </div> <!-- s-hero__content -->
+
+        <div class="s-hero__scroll">
+            <a href="#about" class="s-hero__scroll-link smoothscroll">
+                <span class="scroll-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </div> <!-- s-hero__scroll -->
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="row">
+            <div class="column large-3 tab-12">
+                <img class="s-about__pic" src="images/avatars/user-06.jpg" alt="">
+            </div>
+            <div class="column large-9 tab-12 s-about__content">
+                <h3>About Me</h3>
+                <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
+                quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit 
+                aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
+                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore 
+                magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis 
+                nostrum exercitationem ullam corporis suscipit laboriosam.
+                </p>
+
+                <hr>
+
+                <div class="row s-about__content-bottom">
+                    <div class="column w-1000-stack">
+                        <h3>Contact Details</h3>
+    
+                        <p>
+                        Jonathan Doe <br>
+                        1600 Amphitheatre Parkway <br>
+                        Mountain View, CA 94043 US <br>
+                        <a href="tel:+1975432345">+197 543 2345</a> <br>
+                        <a href="mailto:#0">sayhello@ceevee.com</a>
+                        </p>
+                        
+                    </div>
+                    <div class="column w-1000-stack">
+                        <a href="#0" class="btn btn--download">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path><path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path></svg>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end row -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- resume
+    ================================================== -->
+    <section id="resume" class="s-resume target-section">
+        
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Career</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Dropbox</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Product Designer</span> 
+                            <span class="resume-block__header-date">
+                                August 2019 - Present
+                            </span>
+                        </p>
+                    </div>
+
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
+                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
+                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
+                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Facebook</h4>
+                        <p class="resume-block__header-meta">
+                            <span>UI/UX Designer</span> 
+                            <span class="resume-block__header-date">
+                                August 2016 - July 2019
+                            </span>
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      Stylish Watches
-                    </h1>
+
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
+                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
+                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
+                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+                </div> <!-- end resume-block -->
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      Stylish Watches
-                    </h1>
+        </div> <!-- s-resume__section -->
+
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Education</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">University of Life</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Master in Graphic Design</span> 
+                            <span class="resume-block__header-date">
+                                April 2015
+                            </span>
+                        </p>
+                    </div>
+
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
+                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
+                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
+                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">School of Cool Designers</h4>
+                        <p class="resume-block__header-meta">
+                            <span>B.A. Degree in Graphic Design</span> 
+                            <span class="resume-block__header-date">
+                                August 2012
+                            </span>
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      Stylish Watches
-                    </h1>
+
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
+                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
+                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
+                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+                </div> <!-- end resume-block -->
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      Stylish Watches
-                    </h1>
+        </div> <!-- s-resume__section -->
+
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Skills</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
+                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
+                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
+                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
+
+                    <ul class="skill-bars-fat">
+                        <li>
+                        <div class="progress percent85"></div>
+                        <strong>HTML</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent85"></div>
+                        <strong>CSS</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent65"></div>
+                        <strong>Javascript</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent90"></div>
+                        <strong>Figma</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent75"></div>
+                        <strong>Illustrator</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent60"></div>
+                        <strong>Photoshop</strong>
+                        </li>
+                    </ul>
+
+                </div> <!-- end resume-block -->
+
+            </div>
+        </div> <!-- s-resume__section -->
+
+    </section> <!-- end s-resume -->
+
+
+    <!-- portfolio
+    ================================================== -->
+    <section id="portfolio" class="s-portfolio target-section">
+
+        <div class="row s-portfolio__header">
+            <div class="column large-12">
+                <h3>A Few Of My Latest Creations</h3>
+            </div>
+        </div>
+
+        <div class="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
+
+            <div class="column folio-item">
+                <a href="#modal-01" class="folio-item__thumb">
+                    <img src="images/portfolio/droplet.jpg" 
+                         srcset="images/portfolio/droplet.jpg 1x, 
+                                 images/portfolio/droplet@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-02" class="folio-item__thumb">
+                    <img src="images/portfolio/lamp.jpg" 
+                         srcset="images/portfolio/lamp.jpg 1x, 
+                                 images/portfolio/lamp@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-03" class="folio-item__thumb">
+                    <img src="images/portfolio/minimalismo.jpg" 
+                         srcset="images/portfolio/minimalismo.jpg 1x, 
+                                 images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-04" class="folio-item__thumb">
+                    <img src="images/portfolio/shutterbug.jpg" 
+                         srcset="images/portfolio/shutterbug.jpg 1x, 
+                                 images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-05" class="folio-item__thumb">
+                    <img src="images/portfolio/fuji.jpg" 
+                         srcset="images/portfolio/fuji.jpg 1x, 
+                                 images/portfolio/fuji@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-06" class="folio-item__thumb">
+                    <img src="images/portfolio/skaterboy.jpg" 
+                         srcset="images/portfolio/skaterboy.jpg 1x, 
+                                 images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-07" class="folio-item__thumb">
+                    <img src="images/portfolio/rucksack.jpg" 
+                         srcset="images/portfolio/rucksack.jpg 1x, 
+                                 images/portfolio/rucksack@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-08" class="folio-item__thumb">
+                    <img src="images/portfolio/sanddunes.jpg" 
+                         srcset="images/portfolio/sanddunes.jpg 1x, 
+                                 images/portfolio/sanddunes@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+        </div> <!-- end folio-list -->
+
+
+        <!-- Modal Templates Popup
+        =========================================================== -->
+        <div id="modal-01" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-droplet.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Droplet</h5>
+                    <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-02" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-lamp.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>The Lamp</h5>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-03" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Minimalismo</h5>
+                    <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-04" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-shutterbug.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Shutterbug</h5>
+                    <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
+                    <ul class="modal-popup__cat">
+                        <li>E-Commerce</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-05" hidden>
+            <div class="modal-popup">
+
+                <img src="images/portfolio/gallery/g-fuji.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Fuji</h5>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-06" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Skaterboy</h5>
+                    <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-07" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-rucksack.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Rucksack</h5>
+                    <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-08" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Sand Dunes</h5>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Web Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+
+    </section> <!-- end s-portfolio -->
+
+
+    <!-- CTA
+    ================================================== -->
+    <section class="s-cta">
+
+        <div class="row">
+            <div class="column">
+                <h3 class="h2 section-desc">
+                    Need a great reliable web hosting?
+                </h3>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row cta-content">
+            <div class="column">
+                <p>
+                We highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
+                Powerful web and Wordpress hosting. Guaranteed.
+                Starting at $2.95 per month.
+                </p>
+
+                <a href="https://www.dreamhost.com/r.cgi?287326" class="btn btn--primary h-full-width">Get Started</a>
+            </div>
+        </div> <!-- end cta-content -->
+
+    </section> <!-- end s-cta -->
+
+
+    <!-- testimonials
+    ================================================== -->
+    <section id="testimonials" class="s-testimonials target-section">
+
+        <div class="s-testimonials__bg"></div>
+
+        <div class="row s-testimonials__header">
+            <div class="column large-12">
+                <h3>Hear What My Clients Says</h3>
+            </div>
+        </div>
+
+        <div class="row s-testimonials__content">
+
+            <div class="column">
+
+                <div class="swiper-container testimonial-slider">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Tim Cook</strong>
+                                    <span>CEO, Apple</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
+                            Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
+                            Laudantium quia consequatur molestias delectus culpa.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
+        
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Sundar Pichai</strong>
+                                    <span>CEO, Google</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                            Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
+                            Quasi voluptas eius distinctio. Atque eos maxime.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
+        
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Satya Nadella</strong>
+                                    <span>CEO, Microsoft</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
+                            Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                            Voluptatem dignissimos ut.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
+
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Jeff Bezos</strong>
+                                    <span>CEO, Amazon</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
+                            quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
+                            Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
+    
+                    </div> <!-- end testimonial slider swiper-wrapper -->
+
+                    <div class="swiper-pagination"></div>
+
+                </div> <!-- end swiper-container -->
+
+            </div> <!-- end column -->
+
+        </div> <!-- end row -->
+
+    </section> <!-- end s-testimonials -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="row s-contact__header">
+            <div class="column large-12">
+                <h3 class="section-header-allcaps">Say Hello</h3>
+            </div>
+        </div>
+
+        <div class="row s-contact__content">
+
+            <div class="column large-7 medium-12">
+
+                <h4 class="huge-text">
+                Have a new project in mind? Let's collaborate and build something awesome. 
+                Let's turn that idea to an even greater product :)
+                </h4>
+
+            </div>
+
+            <div class="column large-4 medium-12">
+
+                <div class="row contact-infos">
+                    <div class="column large-12 medium-6 tab-12">
+                        <div class="contact-block">
+                            <h5 class="contact-block__header">
+                                Email
+                            </h5>
+                            <p class="contact-block__content">
+                                <a class="mailtoui" href="mailto:sayhello@ceevee.com">sayhello@ceevee.com</a>
+                            </p>
+                        </div> <!-- end contact-block -->
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
-          <li data-target="#customCarousel1" data-slide-to="3"></li>
-          <li data-target="#customCarousel1" data-slide-to="4"></li>
-        </ol>
-      </div>
-
-    </section>
-    <!-- end slider section -->
-  </div>
-
-
-  <!-- service section -->
-
-  <section class="service_section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/feature-1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Fast Delivery
-              </h5>
-              <p>
-                variations of passages of Lorem Ipsum available
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/feature-2.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Free Shiping
-              </h5>
-              <p>
-                variations of passages of Lorem Ipsum available
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/feature-3.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Best Quality
-              </h5>
-              <p>
-                variations of passages of Lorem Ipsum available
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/feature-4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                24x7 Customer support
-              </h5>
-              <p>
-                variations of passages of Lorem Ipsum available
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img_container">
-            <div class="img-box b1">
-              <img src="images/a-1.jpg" alt="">
-            </div>
-            <div class="img-box b2">
-              <img src="images/a-2.jpg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h2>
-              About Our Shop
-            </h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum
-              There are many variations of
-              passages of Lorem Ipsum
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end about section -->
-
-
-  <!-- product section -->
-
-  <section class="product_section ">
-    <div class="container">
-      <div class="product_heading">
-        <h2>
-          Top Sale Watches
-        </h2>
-      </div>
-      <div class="product_container">
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w2.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w3.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end product section -->
-
-
-  <!-- product section -->
-
-  <section class="product_section ">
-    <div class="container">
-      <div class="product_heading">
-        <h2>
-          Feature Watches
-        </h2>
-      </div>
-      <div class="product_container">
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w5.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w6.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- end product section -->
-
-
-  <!-- product section -->
-
-  <section class="product_section ">
-    <div class="container">
-      <div class="product_heading">
-        <h2>
-          New Arrivals
-        </h2>
-      </div>
-      <div class="product_container">
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w7.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w8.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w9.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- end product section -->
-
-  <!-- contact section -->
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Contact Us
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" placeholder="Your Name" />
-              </div>
-              <div>
-                <input type="text" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-6 ">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end contact section -->
-
-
-  <!-- client section -->
-  <section class="client_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Testimonial
-        </h2>
-      </div>
-    </div>
-    <div id="customCarousel2" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client.jpg" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Morojink
-                        </h5>
-                        <h6>
-                          Customer
-                        </h6>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <div class="column large-12 medium-6 tab-12">
+                        <div class="contact-block">
+                            <h5 class="contact-block__header">
+                                Phone
+                            </h5>
+                            <p class="contact-block__content">
+                                <a href="tel:+1975432345">+197 543 2345</a>
+                            </p>
+                        </div> <!-- end contact-block -->
                     </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore
-                      et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum
-                      dolore eu fugia
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client.jpg" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Morojink
-                        </h5>
-                        <h6>
-                          Customer
-                        </h6>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+                    <div class="column large-12">
+                        <a href="mailto:sayhello@ceevee.com" class="mailtoui btn btn--primary h-full-width">Let's Talk</a>
                     </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore
-                      et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum
-                      dolore eu fugia
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client.jpg" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Morojink
-                        </h5>
-                        <h6>
-                          Customer
-                        </h6>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore
-                      et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum
-                      dolore eu fugia
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ol class="carousel-indicators">
-        <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
-        <li data-target="#customCarousel2" data-slide-to="1"></li>
-        <li data-target="#customCarousel2" data-slide-to="2"></li>
-      </ol>
-    </div>
-  </section>
-  <!-- end client section -->
+                </div> <!-- end contact-infos -->
 
+            </div>
+        </div> <!-- s-contact__content -->
 
-  <!-- info section -->
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="info_logo">
-        <h2>
-          HandTime
-        </h2>
-      </div>
-      <div class="row">
+    </section> <!-- end s-contact -->
+    
 
-        <div class="col-md-3">
-          <div class="info_contact">
-            <h5>
-              About Shop
-            </h5>
-            <div>
-              <div class="img-box">
-                <img src="images/location-white.png" width="18px" alt="">
-              </div>
-              <p>
-                Address
-              </p>
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row">
+            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
+                <ul class="s-footer__social">
+                    <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
-            <div>
-              <div class="img-box">
-                <img src="images/telephone-white.png" width="12px" alt="">
-              </div>
-              <p>
-                +01 1234567890
-              </p>
+
+            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
+                <span>© Copyright Ceevee 2021</span> 
+                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
             </div>
-            <div>
-              <div class="img-box">
-                <img src="images/envelope-white.png" width="18px" alt="">
-              </div>
-              <p>
-                demo@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Informations
-            </h5>
-            <p>
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            </p>
-          </div>
         </div>
 
-        <div class="col-md-3">
-          <div class="info_insta">
-            <h5>
-              Instagram
-            </h5>
-            <div class="insta_container">
-              <div class="row m-0">
-                <div class="col-4 px-0">
-                  <a href="">
-                    <div class="insta-box b-1">
-                      <img src="images/w1.png" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4 px-0">
-                  <a href="">
-                    <div class="insta-box b-1">
-                      <img src="images/w2.png" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4 px-0">
-                  <a href="">
-                    <div class="insta-box b-1">
-                      <img src="images/w3.png" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4 px-0">
-                  <a href="">
-                    <div class="insta-box b-1">
-                      <img src="images/w4.png" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4 px-0">
-                  <a href="">
-                    <div class="insta-box b-1">
-                      <img src="images/w5.png" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4 px-0">
-                  <a href="">
-                    <div class="insta-box b-1">
-                      <img src="images/w6.png" alt="">
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
+             </a>
+        </div> <!-- end ss-go-top -->
+    </footer>
 
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Newsletter
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Enter your email">
-              <button>
-                Subscribe
-              </button>
-            </form>
-            <div class="social_box">
-              <a href="">
-                <img src="images/fb.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/twitter.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/linkedin.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/youtube.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- end info_section -->
-
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
-    </div>
-  </section>
-  <!-- footer section -->
-
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
