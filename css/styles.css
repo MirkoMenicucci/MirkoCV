@@ -3869,7 +3869,7 @@ input[type="button"].btn--primary:focus {
 }
 
 #popUp {
-    background: rgba(37, 37, 37, 0.79);
+    background: rgba(14, 14, 14, 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -3964,6 +3964,7 @@ input[type="button"].btn--primary:focus {
     margin: auto;
 }
 .ctrlImg a{
+    color: var(--color-2);
     opacity: 0.5;
     transition:0.2s;
 }
@@ -3983,6 +3984,9 @@ input[type="button"].btn--primary:focus {
     }
     .s-resume__section .column:first-child {
         text-align: center;
+    }
+    .ctrlImg{
+        display:none;
     }
 }
 
