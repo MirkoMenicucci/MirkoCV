@@ -3960,7 +3960,7 @@ input[type="button"].btn--primary:focus {
     flex-wrap: nowrap;
     align-items: center;
     align-content: start;
-    width: 20px;
+    width: 50px;
     margin: auto;
 }
 .ctrlImg a{
@@ -3972,6 +3972,14 @@ input[type="button"].btn--primary:focus {
 .ctrlImg a:hover{
     opacity: 1;
     transition:0.2s;
+}
+
+#Elem Iframe{
+    width: 100%;
+    height: 100%;
+    border:0;
+    box-shadow: 0 0 0;
+    border-radius: 10px;;
 }
 
 /* ------------------------------------------------------------------- 

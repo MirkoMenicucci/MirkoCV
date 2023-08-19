@@ -276,7 +276,6 @@
         <div class="row s-resume__section">
             <div id="popUp" class="pop-up" >
                 <div class="element" id="Elem">
-                    <img id="contImg" src="" data-percZoom="1" />
                     <div class="ctrlImg">
                         <a href="javascript:zoom('+')" id="btnZoomIn" ><i class="fa-solid fa-magnifying-glass-plus"></i></a>
                         <a href="javascript:zoom('-')" id="btnZoomOut" ><i class="fa-solid fa-magnifying-glass-minus"></i></a>
@@ -295,13 +294,13 @@
 
                     <div class="resume-block__header">
                         <h4 class="h3">ITIS Informatica e telecomunicazioni</h4>
-                        <a href="javascript:viewOnPopUp('Documents/maturita.jpg')"> <i class="fa-solid fa-file-contract"></i> Diploma </a>
                         <p class="resume-block__header-meta">
                             <span>MATURITA | Voto 77 / 100</span> 
                             <span class="resume-block__header-date">
                                 2022
                             </span>
                         </p>
+                        <a href="javascript:viewOnPopUp('Documents/maturita.jpg')"> <i class="fa-solid fa-file-contract"></i> Diploma </a>
                     </div>
 
                     <p>
@@ -315,13 +314,13 @@
 
                     <div class="resume-block__header">
                         <h4 class="h3">ADECCO - Presso Euroinformatica SRL</h4>
-                        <a href="javascript:viewOnPopUp('Documents/certAdecco.jpg')"> <i class="fa-solid fa-file-contract"></i> Certificato </a>
                         <p class="resume-block__header-meta">
                             <span>CORSO DI PROGRAMMAZIONE WEB</span> 
                             <span class="resume-block__header-date">
                                 2020
                             </span>
                         </p>
+                        <a href="javascript:viewOnPopUp('Documents/certAdeccoDev.pdf')"> <i class="fa-solid fa-file-contract"></i> Certificato </a>
                     </div>
 
                     <p>
@@ -335,13 +334,13 @@
 
                     <div class="resume-block__header">
                         <h4 class="h3">Operatore Tecnico Legno</h4>
-                        <a href="javascript:viewOnPopUp('Documents/attFalegname.jpg')"> <i class="fa-solid fa-file-contract"></i> Attestato </a>
                         <p class="resume-block__header-meta">
                             <span>QUALIFICA | Voto 77 / 100</span> 
                             <span class="resume-block__header-date">
                                 2015 - 2019
                             </span>
                         </p>
+                        <a href="javascript:viewOnPopUp('Documents/attFalegname.jpg')"> <i class="fa-solid fa-file-contract"></i> Attestato </a>
                     </div>
 
                     <p>
@@ -850,9 +849,21 @@
     <script src="js/main.js"></script>
     <script src="js/jquery.js"></script>
     <script>
+
+        function getFileExtension(path) {
+            return path.split('.').pop();
+        }
+
         function viewOnPopUp(path){
-            $("#popUp img").attr("src", path)
-            $("#zoom img").attr("src", path)
+            $("#contImg").remove()
+            $(".ctrlImg").hide()
+            var ext = getFileExtension(path);
+            var elem = '<img id="contImg" src="' + path + '" data-percZoom="1"/>'
+            if(ext == 'pdf'){
+                elem = '<iframe id="contImg" src="' + path + '" data-percZoom="1"></iframe>'
+                $(".ctrlImg").hide()
+            }
+            $("#popUp #Elem").prepend(elem)
             $("#popUp").fadeIn()
         }
         function closePopUp(){
@@ -883,7 +894,7 @@
 
         $(document).ready(function(){
             $(".element").mousemove(function(e) {
-                var zoomedImage = $(this).find("img");
+                var zoomedImage = $(this).find("#contImg");
                 var offsetX = e.pageX - $(this).offset().left;
                 var offsetY = e.pageY - $(this).offset().top;
                 var percentX = (offsetX / $(this).width()) * 100;
