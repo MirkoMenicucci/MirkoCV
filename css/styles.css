@@ -27,7 +27,7 @@
 
     /* theme color variations
      */
-    --color-1-lighter: hsla(182, 82%, 58%, 1);
+    --color-1-lighter: rgb(236, 142, 60);
     --color-1-light  : hsla(182, 82%, 48%, 1);
     --color-1-dark   : hsla(182, 82%, 28%, 1);
     --color-1-darker : hsla(182, 82%, 18%, 1);
@@ -621,6 +621,19 @@ input[type="password"], textarea {
     appearance: none;
 }
 
+.goldText{
+    background: linear-gradient(90deg, rgba(101,78,38,1) 0%, rgba(194,152,53,1) 35%, rgba(224,187,98,1) 50%, rgba(194,152,53,1) 73%, rgba(101,78,38,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.GoldBg{
+    background: linear-gradient(90deg, rgba(101,78,38,1) 0%, rgba(194,152,53,1) 35%, rgba(224,187,98,1) 50%, rgba(194,152,53,1) 73%, rgba(101,78,38,1) 100%);
+}
+
+.textGlow{
+    text-shadow: 0 0px 7px #fff;
+}
 
 /* ===================================================================
  * # Grid v3.0.0
@@ -1519,13 +1532,13 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-    color: var(--color-1);
+    color: var(--color-2);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 a:hover, a:focus, a:active {
-    color: var(--color-2);
+    color: var(--color-2-dark);
 }
 
 a:hover, a:active {
@@ -2867,10 +2880,11 @@ input[type="button"].btn--primary:focus {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: var(--color-1);
+    /*background-color: var(--color-1);*/
     position: absolute;
     left: 0;
     bottom: 0;
+    background: linear-gradient(90deg, rgba(101,78,38,1) 0%, rgba(194,152,53,1) 35%, rgba(224,187,98,1) 50%, rgba(194,152,53,1) 73%, rgba(101,78,38,1) 100%);
 }
 
 /* ------------------------------------------------------------------- 
@@ -3740,6 +3754,7 @@ input[type="button"].btn--primary:focus {
     border-color: white;
     color: black;
     margin-right: 0;
+    border:0;
 }
 
 .s-about__content-bottom .btn--download svg {
@@ -3818,7 +3833,7 @@ input[type="button"].btn--primary:focus {
 .s-resume {
     background-color: white;
     padding-top: calc(6 * var(--space));
-    padding-bottom: var(--vspace-4);
+    padding-bottom: var(--vspace-2);
 }
 
 .s-resume__section {
