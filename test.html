@@ -3,47 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hover Zoom Example</title>
+    <title>SVG Box Shadow</title>
     <style>
-        .zoom-container {
-            position: relative;
-            overflow: hidden;
-            width: 400px;
-            height: 400px;
+        .svg-container {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgray;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
-
-        .zoomed-image {
-            position: absolute;
-            transform: scale(1);
-            transform-origin: 0 0;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .zoom-container:hover .zoomed-image {
-            transform: scale(2);
+        
+        svg {
+            width: 80%;
+            height: 80%;
+            fill: blue;
         }
     </style>
 </head>
 <body>
-    <div class="zoom-container">
-        <img src="path/to/your/image.jpg" alt="Image" class="zoomed-image">
+    <div class="svg-container">
+        <!-- Inserisci qui il tuo codice SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" />
+        </svg>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".zoom-container").mousemove(function(e) {
-                var zoomedImage = $(this).find(".zoomed-image");
-                var offsetX = e.pageX - $(this).offset().left;
-                var offsetY = e.pageY - $(this).offset().top;
-                var percentX = (offsetX / $(this).width()) * 100;
-                var percentY = (offsetY / $(this).height()) * 100;
-                
-                zoomedImage.css({
-                    "transform-origin": percentX + "% " + percentY + "%"
-                });
-            });
-        });
-    </script>
 </body>
 </html>
