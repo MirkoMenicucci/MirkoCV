@@ -21,9 +21,17 @@
     <!-- script
     ================================================== -->
     <script defer src="js/vendor/fontawesome/all.min.js"></script>
+    <!--<script defer src="js/lightGallery.min.js"></script> -->
+
     <script src="https://kit.fontawesome.com/963e7ffae0.js" crossorigin="anonymous"></script>
 
     <!-- favicons
+    ================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- jquery
     ================================================== -->
 
     <link rel="apple-touch-icon" sizes="57x57" href="images/Favicon/apple-icon-57x57.png">
@@ -266,14 +274,23 @@
 
 
         <div class="row s-resume__section">
+            <div id="popUp" class="pop-up" >
+                <div class="element">
+                    <img src="" />
+                </div>
+                <div class="button">
+                    <a href="javascript:closePopUp()"><i class="fa-solid fa-circle-xmark"></i></a>
+                </div>
+            </div>
             <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Education</h3>
+                <h3 class="section-header-allcaps">Formazione</h3>
             </div>
             <div class="column large-9 tab-12">
                 <div class="resume-block">
 
                     <div class="resume-block__header">
-                        <h4 class="h3">ITIS Informatica e telecomunicazioni</h4>
+                        <h4 class="h3">ITIS Informatica e telecomunicazioni</h4> 
+                        <button onclick="viewOnPopUp( 'Documents/attFalegname.jpg')"> Diploma </button>
                         <p class="resume-block__header-meta">
                             <span>MATURITA | Voto 77 / 100</span> 
                             <span class="resume-block__header-date">
@@ -418,40 +435,48 @@
             <div class="column folio-item">
                 <a href="#modal-04" class="folio-item__thumb">
                     <img src="images/portfolio/shutterbug.jpg" 
-                         srcset="images/portfolio/shutterbug.jpg 1x, 
-                                 images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                        srcset="images/portfolio/shutterbug.jpg 1x, 
+                                images/portfolio/shutterbug@2x.jpg 2x" alt="">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
                 <a href="#modal-05" class="folio-item__thumb">
                     <img src="images/portfolio/fuji.jpg" 
-                         srcset="images/portfolio/fuji.jpg 1x, 
-                                 images/portfolio/fuji@2x.jpg 2x" alt="">
+                        srcset="images/portfolio/fuji.jpg 1x, 
+                                images/portfolio/fuji@2x.jpg 2x" alt="">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
                 <a href="#modal-06" class="folio-item__thumb">
                     <img src="images/portfolio/skaterboy.jpg" 
-                         srcset="images/portfolio/skaterboy.jpg 1x, 
-                                 images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                        srcset="images/portfolio/skaterboy.jpg 1x, 
+                                images/portfolio/skaterboy@2x.jpg 2x" alt="">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
                 <a href="#modal-07" class="folio-item__thumb">
                     <img src="images/portfolio/rucksack.jpg" 
-                         srcset="images/portfolio/rucksack.jpg 1x, 
-                                 images/portfolio/rucksack@2x.jpg 2x" alt="">
+                        srcset="images/portfolio/rucksack.jpg 1x, 
+                            images/portfolio/rucksack@2x.jpg 2x" alt="">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
                 <a href="#modal-08" class="folio-item__thumb">
                     <img src="images/portfolio/sanddunes.jpg" 
-                         srcset="images/portfolio/sanddunes.jpg 1x, 
-                                 images/portfolio/sanddunes@2x.jpg 2x" alt="">
+                        srcset="images/portfolio/sanddunes.jpg 1x, 
+                                images/portfolio/sanddunes@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-09" class="folio-item__thumb">
+                    <img src="images/portfolio/sanddunes.jpg" 
+                        srcset="images/portfolio/sanddunes.jpg 1x, 
+                                images/portfolio/sanddunes@2x.jpg 2x" alt="">
                 </a>
             </div> <!-- end folio-item -->
 
@@ -577,6 +602,22 @@
         </div> <!-- end modal -->
 
         <div id="modal-08" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Sand Dunes</h5>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Web Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-09" hidden>
             <div class="modal-popup">
                 <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="" />
     
@@ -768,7 +809,7 @@
 
             </div>
         </div> <!-- s-contact__content -->
-
+        <div id="hiddenGallery" style="display: none;"></div>
     </section> <!-- end s-contact -->
     
 
@@ -790,7 +831,7 @@
         <div class="ss-go-top">
             <a class="smoothscroll" title="Back to Top" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
-             </a>
+            </a>
         </div> <!-- end ss-go-top -->
     </footer>
 
@@ -799,6 +840,18 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        function viewOnPopUp(path){
+            $("#popUp img").attr("src", path)
+            $("#popUp").fadeIn()
+        }
+        function closePopUp(){
+            $("#popUp").fadeOut()
+        }
+    </script>
+
+    
 
 </body>
 
