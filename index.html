@@ -276,7 +276,7 @@
         <div class="row s-resume__section">
             <div id="popUp" class="pop-up" >
                 <div class="element">
-                    <img src="" />
+                    <img id="contImg" src="" />
                 </div>
                 <div class="button">
                     <a href="javascript:closePopUp()"><i class="fa-solid fa-circle-xmark"></i></a>
@@ -290,7 +290,7 @@
 
                     <div class="resume-block__header">
                         <h4 class="h3">ITIS Informatica e telecomunicazioni</h4> 
-                        <button onclick="viewOnPopUp( 'Documents/attFalegname.jpg')"> Diploma </button>
+                        <button onclick="viewOnPopUp( 'Documents/attFalegname.jpg')"> Vedi diploma </button>
                         <p class="resume-block__header-meta">
                             <span>MATURITA | Voto 77 / 100</span> 
                             <span class="resume-block__header-date">
@@ -849,6 +849,30 @@
         function closePopUp(){
             $("#popUp").fadeOut()
         }
+        $(document).ready(function(){
+            $(".element").mousemove(function(e) {
+                var zoomedImage = $(this).find("img");
+                var offsetX = e.pageX - $(this).offset().left;
+                var offsetY = e.pageY - $(this).offset().top;
+                var percentX = (offsetX / $(this).width()) * 100;
+                var percentY = (offsetY / $(this).height()) * 100;
+                
+                zoomedImage.css({
+                    "transform-origin": percentX + "% " + percentY + "%"
+                });
+
+            });
+
+            $("#contImg").on("mouseleave", function() {
+                $(".element img").removeClass("zoom-no");
+                $(".element img").addClass("zoom-si");
+            });
+
+            $("#contImg").mousemove(function(e) {
+                $(".element img").addClass("zoom-si");
+                $(".element img").removeClass("zoom-no");
+            });
+        })
     </script>
 
     

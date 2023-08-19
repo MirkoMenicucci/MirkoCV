@@ -3919,6 +3919,16 @@ input[type="button"].btn--primary:focus {
     transition: .2s
 }
 
+.zoom-si{
+    transform: scale(2);
+    transition:0.2s;
+}
+
+.zoom-no{
+    transform: scale(1);
+    transition:0.2s;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * resume
