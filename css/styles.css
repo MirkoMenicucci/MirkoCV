@@ -3896,6 +3896,7 @@ input[type="button"].btn--primary:focus {
     margin: auto;
     overflow: hidden;
     text-align: center;
+    max-width: 600px;
 }
 #popUp img {
     border-radius: 10px;
@@ -3926,6 +3927,49 @@ input[type="button"].btn--primary:focus {
 
 .zoom-no{
     transform: scale(1);
+    transition:0.2s;
+}
+
+#zoom {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    display: none;
+    pointer-events: none;
+    overflow: hidden;
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(1);
+}
+
+#zoom img {
+    width: 100%;
+    height: auto;
+    transform-origin: top left;
+}
+
+.ctrlImg {
+    position: absolute;
+    top: 3%;
+    bottom: 0;
+    left: 0;
+    right: -90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: start;
+    width: 20px;
+    margin: auto;
+}
+.ctrlImg a{
+    opacity: 0.5;
+    transition:0.2s;
+}
+
+.ctrlImg a:hover{
+    opacity: 1;
     transition:0.2s;
 }
 

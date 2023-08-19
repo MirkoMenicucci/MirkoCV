@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
 
     <!--- basic page needs
@@ -275,8 +275,13 @@
 
         <div class="row s-resume__section">
             <div id="popUp" class="pop-up" >
-                <div class="element">
-                    <img id="contImg" src="" />
+                <div class="element" id="Elem">
+                    <img id="contImg" src="" data-percZoom="1" />
+                    <div class="ctrlImg">
+                        <a href="javascript:zoom('+')" id="btnZoomIn" ><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="javascript:zoom('-')" id="btnZoomOut" ><i class="fa-solid fa-magnifying-glass-minus"></i></a>
+                        <a href="javascript:zoomReset()" id="btnZoomReset" ><i class="fa-solid fa-retweet"></i></a>
+                    </div>
                 </div>
                 <div class="button">
                     <a href="javascript:closePopUp()"><i class="fa-solid fa-circle-xmark"></i></a>
@@ -289,8 +294,9 @@
                 <div class="resume-block">
 
                     <div class="resume-block__header">
-                        <h4 class="h3">ITIS Informatica e telecomunicazioni</h4> 
-                        <button onclick="viewOnPopUp( 'Documents/attFalegname.jpg')"> Vedi diploma </button>
+                        <h4 class="h3">ITIS Informatica e telecomunicazioni
+                            <a href="javascript:viewOnPopUp('Documents/attFalegname.jpg')"> Vedi diploma </a>
+                        </h4> 
                         <p class="resume-block__header-meta">
                             <span>MATURITA | Voto 77 / 100</span> 
                             <span class="resume-block__header-date">
@@ -827,7 +833,7 @@
                 </ul>
             </div>
         </div>
-        
+
 
         <div class="ss-go-top">
             <a class="smoothscroll" title="Back to Top" href="#top">
@@ -845,11 +851,35 @@
     <script>
         function viewOnPopUp(path){
             $("#popUp img").attr("src", path)
+            $("#zoom img").attr("src", path)
             $("#popUp").fadeIn()
         }
         function closePopUp(){
             $("#popUp").fadeOut()
         }
+
+        function zoom(method){
+            var $contImg = $("#contImg")
+            var nIncrement = $contImg.data("perczoom") 
+            if(method == '+'){
+                nIncrement = nIncrement + 0.5
+            }
+            else{
+                nIncrement = nIncrement - 0.5
+            }
+            if(nIncrement <= 0){
+                nIncrement = 1
+            }
+            $("#contImg").css("transform","scale(" + nIncrement + ")")
+            $contImg.data("perczoom",nIncrement)
+        }
+
+        function zoomReset(method){
+            var $contImg = $("#contImg")
+            $contImg.data("perczoom",1)
+            $("#contImg").css("transform","scale(1)")
+        }
+
         $(document).ready(function(){
             $(".element").mousemove(function(e) {
                 var zoomedImage = $(this).find("img");
@@ -864,7 +894,8 @@
 
             });
 
-            $("#contImg").on("mouseleave", function() {
+
+            /*$("#contImg").on("mouseleave", function() {
                 $(".element img").removeClass("zoom-no");
                 $(".element img").addClass("zoom-si");
             });
@@ -872,7 +903,7 @@
             $("#contImg").mousemove(function(e) {
                 $(".element img").addClass("zoom-si");
                 $(".element img").removeClass("zoom-no");
-            });
+            });*/
         })
     </script>
 
