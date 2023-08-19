@@ -3309,6 +3309,7 @@ input[type="button"].btn--primary:focus {
     }
     .s-header__menu-toggle {
         display: block;
+        border-radius: 0 0 0 10px;
     }
     .menu-is-open .s-header__nav-wrap {
         height: auto;
@@ -3602,6 +3603,10 @@ input[type="button"].btn--primary:focus {
     .s-hero__content h3 {
         font-size: 2rem;
     }
+    .s-hero__bg {
+        background-position: 70%;
+    }
+
 }
 
 @media screen and (max-width: 1400px) {
@@ -3781,8 +3786,14 @@ input[type="button"].btn--primary:focus {
     .s-about {
         padding-top: var(--vspace-5);
     }
-    .s-about__pic {
+    /*.s-about__pic {
         display: none;
+    }*/
+
+    .s-about__pic {
+        /* display: none; */
+        width: 50%;
+        height: auto;
     }
 }
 
