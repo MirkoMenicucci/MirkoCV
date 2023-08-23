@@ -4016,11 +4016,20 @@ input[type="button"].btn--primary:focus {
 
 .skillList {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-content: center;
+    align-content: flex-start;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.skillList hr{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.circleDescCont {
+    width: 75%;
 }
 
 .headline {
@@ -4043,13 +4052,13 @@ input[type="button"].btn--primary:focus {
 
 .circle-big .bg {
     fill: none;
-    stroke-width: 10px;
+    stroke-width: 3px;
     stroke: #252525;
 }
 
 .circle-big .progress {
     fill: none;
-    stroke-width: 10px;
+    stroke-width: 5px;
     stroke: var(--color-2);
     stroke-linecap: round;
     stroke-dasharray: 326.56;
@@ -4068,10 +4077,24 @@ input[type="button"].btn--primary:focus {
     text-align: center;
     font-weight: 400;
     line-height: 22px;
-    }
+}
+
+.circleContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circleContainer .text img{
+    margin: 0;
+    width: 44px;
+}
 
 .circle-big .text .small {
-    font-size: 14px;
+    font-size: 12px;
     color: #000;
 }
 
@@ -4136,6 +4159,10 @@ input[type="button"].btn--primary:focus {
 .circle-small .text .small {
     font-size: 12px;
     color: #000;
+}
+
+.circle-col {
+    width: 25%;
 }
 
 @-webkit-keyframes big {
