@@ -72,18 +72,20 @@ var smsData = {
     "message_type": MESSAGE_HIGH_QUALITY
 };
 
-/*
-login('MY_REGISTRATION_EMAIL', 'MY_PASSWORD', function(error, auth) {
-    if (!error) {
-        sendSMS(auth, smsData, function(error, data) {
-        if (error) {
-            console.log("An error occurred");
+
+function startSendSMS(txt, number){
+    login('mirko.menicucci@gmail.com', '#MirkoCV12345', function(error, auth) {
+        if (!error) {
+            sendSMS(auth, smsData, function(error, data) {
+            if (error) {
+                console.log("An error occurred");
+            } else {
+                console.log("SMS Sent!");
+            }
+            });
         } else {
-            console.log("SMS Sent!");
+            console.log("Unable to login");
         }
-        });
-    } else {
-        console.log("Unable to login");
-    }
-});
-*/
+    });
+}
+
