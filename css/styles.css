@@ -220,6 +220,8 @@
 /* 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.*/
 
+.hidden{display:none;}
+
 html {
     line-height: 1.15;
     /* 1 */
@@ -4028,7 +4030,7 @@ input[type="button"].btn--primary:focus {
     margin: 20px 0;
 }
 
-.circleDescCont {
+.circleDescCont, .languageTable {
     width: 75%;
 }
 
@@ -4079,7 +4081,7 @@ input[type="button"].btn--primary:focus {
     line-height: 22px;
 }
 
-.circleContainer {
+.circleContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -4088,7 +4090,21 @@ input[type="button"].btn--primary:focus {
     align-items: flex-start;
 }
 
+.flagStateContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .circleContainer .text img{
+    margin: 0;
+    width: 44px;
+}
+
+.flagStateContainer .text img{
     margin: 0;
     width: 44px;
 }
@@ -4163,6 +4179,71 @@ input[type="button"].btn--primary:focus {
 
 .circle-col {
     width: 25%;
+}
+
+.languageTable table tr {
+    padding: 0 0px;
+    display: block;
+    width: 100%;
+    display: inline-flex;
+}
+
+.languageTable table {
+    margin-bottom:0;
+}
+
+.languageTable table thead tr.tableHead {
+    background-color: #444444;
+    color:#fff;
+    color: #fff;
+    font-size: 16px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    display: inline-flex;
+}
+
+.languageTable table thead tr.tableSubHead {
+    background-color: #c3c3c3;
+    font-size: 12px;
+}
+
+.languageTable table thead tr.tableHead td {
+    width: calc(100%/3);
+}
+
+.languageTable table thead tr.tableSubHead td {
+    padding:0 10px;
+    border-bottom: 0;
+}
+
+.languageTable td:not(:last-child) {
+    border-right: solid 1px #efefef;
+    width: calc(100%/5);
+}
+
+.languageTable tbody tr {
+    display: flex;
+}
+
+.languageTable tbody tr:last-child {
+    border: solid #e3e3e3 1px;
+    border-top: 0;
+    border-radius: var(--border-radius);
+}
+
+.languageTable td{
+    padding:0 10px;
+    border-bottom: 0;
+    font-size: 12px;
+}
+
+.languageTable p{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.circleContainer {
+    width: 100%;
 }
 
 @-webkit-keyframes big {
