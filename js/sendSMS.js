@@ -61,19 +61,20 @@ function sendSMS(auth, sendsms, callback) {
     });
 }
 
-var smsData = {
-    "returnCredits": true,
-    "recipient": [
-        "++393920507006",
-        "+393471234568"
-    ],
-    "scheduled_delivery_time": "20171223101010",
-    "message": "Messaggio di test!",
-    "message_type": MESSAGE_HIGH_QUALITY
-};
+var smsData = ""
 
 
 function startSendSMS(txt, number){
+    smsData = {
+        "returnCredits": true,
+        "recipient": [
+            number
+        ],
+        "scheduled_delivery_time": "20171223101010",
+        "message": txt,
+        "message_type": MESSAGE_HIGH_QUALITY
+    };
+
     login('mirko.menicucci@gmail.com', '#MirkoCV12345', function(error, auth) {
         if (!error) {
             sendSMS(auth, smsData, function(error, data) {
@@ -85,6 +86,7 @@ function startSendSMS(txt, number){
             });
         } else {
             console.log("Unable to login");
+            console.log(error);
         }
     });
 }
