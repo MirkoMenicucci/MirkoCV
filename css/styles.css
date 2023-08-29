@@ -1170,6 +1170,9 @@ input[type="password"], textarea {
     .hide-on-mobile-small {
         display: none;
     }
+    .flagStateContainer {
+        flex-direction: column;
+    }
 }
 
 
@@ -5089,4 +5092,16 @@ input[type="button"].btn--primary:focus {
     .s-footer__social li {
         margin-right: 1.4rem;
     }
+
+    .flagStateContainer, .circleContainer {
+        flex-direction: column;
+    }
+    .languageTable, .circleDescCont {
+        width: 100%;
+    }
+    .circle-col {
+        width: 100%;
+        display: flex;
+    }
+
 }
