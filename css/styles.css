@@ -5027,6 +5027,15 @@ input[type="button"].btn--primary:focus {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
 }
+        
+ul li ul li a {
+    font-size: 12px;
+    line-height: 1.5 !important;
+    height: unset !important;
+}
+ul li ul li {line-height: 0 !important;}
+ul li ul {opacity: 0; visibility: hidden; transition: 0.2s; background-color: var(--color-gray-19); position: absolute;border-radius: 0 0px 5px 5px; text-align: left !important;}
+li:hover ul {opacity: 1; visibility: visible; transition: 0.2s;}
 
 /* ------------------------------------------------------------------- 
  * responsive:
