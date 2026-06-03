@@ -1,0 +1,248 @@
+{
+    "personal_info": {
+        "name": "Mirko Menicucci",
+        "email": "m.menicucci00@gmail.com",
+        "phone": "+393920507006",
+        "location": "Roma, Italia",
+        "available": true,
+        "title": "Full Stack Developer & AI Specialist",
+        "alt_titles": [
+            "Web & App Developer",
+            "AI Integration Expert",
+            "Dal foglio bianco al deploy"
+        ],
+        "socials": {
+            "linkedin": "https://it.linkedin.com/in/mirko-menicucci-601a9b22a",
+            "instagram": "https://www.instagram.com/okrim000?igsh=MWl0OHk5ejl3YTQ3cA%3D%3D&utm_source=qr"
+        }
+    },
+    "summary": {
+        "text": "Full Stack Developer con 8 anni di esperienza. Dalla grafica al database, dall'interfaccia alla sicurezza — costruisco prodotti digitali completi partendo da zero. Oggi mi specializzo nell'integrare l'AI nei processi aziendali per automatizzare ciò che rallenta le persone."
+    },
+    "about": {
+        "photo": "setup.jpg",
+        "quote": "Nel mezzo della difficoltà nasce l'opportunità.",
+        "quote_author": "Albert Einstein",
+        "description": "Sono un Full Stack Developer con 8 anni di esperienza sul campo. Controllo l'intero stack: dall'interfaccia grafica — che progetto e sviluppo in autonomia — all'architettura del database, dalla logica applicativa alla gestione della sicurezza. Nessuna parte delegata a caso.\n\nHo vissuto anni di bullismo a scuola e invece di fermarmi, quella difficoltà mi ha insegnato la resilienza che oggi porto in ogni progetto.\n\nMi sto specializzando sull'integrazione dell'AI nei processi aziendali: individuo i flussi lenti e ripetitivi e li trasformo in sistemi che lavorano in autonomia.\n\nHo 25 anni, sono sposato e sto costruendo la mia famiglia. La stessa serietà che metto nella vita, la metto nel lavoro.",
+        "stats": [
+            {
+                "value": "8+",
+                "label": "Anni di esperienza"
+            },
+            {
+                "value": "50+",
+                "label": "Progetti completati"
+            },
+            {
+                "value": "40+",
+                "label": "Clienti soddisfatti"
+            },
+            {
+                "value": "AI",
+                "label": "In costante evoluzione"
+            }
+        ]
+    },
+    "superpowers": [
+        {
+            "icon": "layers",
+            "title": "Full Stack, tutto lo stack",
+            "description": "Grafica, interfaccia, logica, database, sicurezza: sviluppo prodotti digitali completi in autonomia, senza delegare niente a nessuno."
+        },
+        {
+            "icon": "bot",
+            "title": "AI nei processi aziendali",
+            "description": "Integro l'intelligenza artificiale dove crea valore: elimino flussi lenti e ripetitivi, automatizzo la raccolta dati e accelero la digitalizzazione."
+        },
+        {
+            "icon": "plug",
+            "title": "Integrazioni & API",
+            "description": "Collego qualsiasi sistema: gestionali, e-commerce, CRM, pagamenti (PayPal, Stripe, Nexi, SDI). Ogni dato al posto giusto."
+        },
+        {
+            "icon": "palette",
+            "title": "UI Design & Grafica",
+            "description": "Non solo codice — progetto anche l'interfaccia. Photoshop, Lightroom e CSS avanzato per prodotti che funzionano e che si vedono bene."
+        }
+    ],
+    "work_experience": [
+        {
+            "company": "Ready Digital",
+            "location": "Rome (RM)",
+            "role": "CRM Consultant & Plugin Developer & Full Stack Developer",
+            "period": "2024 — In corso",
+            "description": "Sviluppo full stack di applicazioni web, plugin personalizzati per il CRM VTENEXT con integrazione di servizi esterni, integrazione di sistemi AI nei workflow aziendali, automazione di processi ripetitivi e consulenza sulla digitalizzazione.",
+            "tech_tags": [
+                "AI Integration",
+                "CRM Consultation",
+                "Plugin Development",
+                "Automation",
+                "API",
+                "PHP"
+            ],
+            "focus": [
+                "Sviluppo web e app full stack end-to-end",
+                "Integrazione AI per automatizzare processi aziendali",
+                "Digitalizzazione e ottimizzazione dei flussi di lavoro",
+                "Consulenza tecnica su architettura e sicurezza"
+            ]
+        },
+        {
+            "company": "Euroinformatica SRL",
+            "location": "Arezzo (AR)",
+            "role": "Full Stack Developer & Istruttore e Formatore",
+            "period": "2019 — 2024",
+            "description": "Sviluppo full stack di software gestionali personalizzati, e-commerce multi-piattaforma, integrazioni API (PayPal, Stripe, Nexi, SDI) e formazione tecnica ai clienti.",
+            "tech_tags": [
+                "ASP.NET",
+                "C#",
+                "VB",
+                "JavaScript",
+                "MySQL",
+                "E-commerce"
+            ],
+            "responsibilities": [
+                "Software gestionali su misura per gioiellerie, meccanica, banche e enti ispettivi",
+                "E-commerce multi-piattaforma con integrazione metodi di pagamento",
+                "Interfacce automatizzate per invio fatture tramite SDI",
+                "Integrazioni API tra sistemi gestionali e piattaforme esterne",
+                "Formazione e supporto tecnico diretto ai clienti"
+            ]
+        },
+        {
+            "company": "Marconi SRL",
+            "location": "Arezzo (AR)",
+            "role": "Operatore Tecnico",
+            "period": "2018 — 2019",
+            "description": "Prima del percorso informatico: esperienza manuale che ha costruito precisione, pianificazione e capacità di tradurre concetti complessi in risultati concreti.",
+            "tech_tags": [
+                "Problem Solving",
+                "Precisione",
+                "Lavoro in team"
+            ],
+            "responsibilities": [
+                "Progettazione e realizzazione di arredi su misura",
+                "Pianificazione e gestione del progetto",
+                "Risoluzione di problemi imprevisti in team"
+            ]
+        }
+    ],
+    "skills": {
+        "technical": [
+            {
+                "name": "AI Integration",
+                "level": 7
+            },
+            {
+                "name": "Full Stack Development",
+                "level": 9
+            },
+            {
+                "name": "JavaScript / HTML / CSS",
+                "level": 8
+            },
+            {
+                "name": "ASP.NET / VB / PHP",
+                "level": 8
+            },
+            {
+                "name": "Database & Backend",
+                "level": 8
+            },
+            {
+                "name": "UI Design / Photoshop",
+                "level": 7
+            }
+        ],
+        "soft_skills": [
+            {
+                "name": "Formatore",
+                "level": 9
+            },
+            {
+                "name": "Problem Solving",
+                "level": 9
+            },
+            {
+                "name": "Autonomia",
+                "level": 9
+            },
+            {
+                "name": "Affidabilità",
+                "level": 9
+            },
+            {
+                "name": "Comunicazione",
+                "level": 8
+            }
+        ]
+    },
+    "education": {
+        "diploma": {
+            "type": "Diploma — Informatica e Telecomunicazioni",
+            "institution": "ITIS — Voto 77/100 — 2022"
+        },
+        "additional_training": [
+            {
+                "course": "Corso Programmazione Web",
+                "institution": "ADECCO / Euroinformatica SRL — 2020",
+                "skills_acquired": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "MySQL"
+                ]
+            },
+            {
+                "course": "Corso Grafica Web",
+                "institution": "ADECCO / Euroinformatica SRL — 2020",
+                "skills_acquired": [
+                    "Photoshop",
+                    "Lightroom"
+                ]
+            },
+            {
+                "course": "Corsi di aggiornamento continuo",
+                "institution": "Udemy — 2023 / In corso",
+                "skills_acquired": [
+                    "AI",
+                    "Full Stack",
+                    "Best Practices"
+                ]
+            }
+        ]
+    },
+    "certifications": [
+        {
+            "name": "Anagrafiche e ciclo acquisizione cliente",
+            "issuer": "VTENEXT Srl",
+            "date": "2025",
+            "file": "certs/anagCicloAcqVteNext.pdf"
+        },
+        {
+            "name": "Diploma — Informatica e Telecomunicazioni",
+            "issuer": "ITIS Giacomo Leopardi — Ministero dell'Istruzione",
+            "date": "2022",
+            "file": "certs/maturita.pdf"
+        },
+        {
+            "name": "Certificato di Frequenza — Programmazione Web",
+            "issuer": "Adecco Formazione S.r.l.",
+            "date": "2019",
+            "file": "certs/certAdeccoDev.pdf"
+        },
+        {
+            "name": "Certificato di Frequenza — Grafica Web",
+            "issuer": "Adecco Formazione S.r.l.",
+            "date": "2019",
+            "file": "certs/certAdeccoGraf.pdf"
+        },
+        {
+            "name": "Qualifica III Livello EQF — Operatore del Legno",
+            "issuer": "Fondazione ENAIP Lombardia",
+            "date": "2018",
+            "file": "certs/attFalegname.pdf"
+        }
+    ],
+    "projects": []
+}
