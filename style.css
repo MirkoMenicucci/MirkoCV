@@ -357,16 +357,16 @@ section:nth-child(even){background:var(--bg2)}
 .cv-main-content p{font-size:.88rem;color:var(--t2);margin-bottom:28px}
 .cv-main-btns{display:flex;gap:12px;flex-wrap:wrap}
 .cv-side{display:flex;flex-direction:column}
-.cv-cert-card{border-radius:24px;padding:32px;height:100%}
+.cv-cert-card{border-radius:24px;padding:32px}
 .cv-cert-header{display:flex;align-items:center;gap:12px;margin-bottom:24px}
 .cv-cert-ico{width:40px;height:40px;background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--acc);flex-shrink:0}
 .cv-cert-ico svg{width:20px;height:20px}
 .cv-cert-header h3{font-size:1rem;font-weight:700}
 .cv-cert-empty{font-size:.82rem;color:var(--t3);font-style:italic}
-.cert-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--brd)}
+.cert-item{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--brd)}
 .cert-item:last-child{border-bottom:none}
-.cert-info{display:flex;flex-direction:column;gap:2px;min-width:0}
-.cert-name{font-size:.88rem;font-weight:600;color:var(--t1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cert-info{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cert-name{font-size:.85rem;font-weight:600;color:var(--t1);word-break:break-word;line-height:1.4}
 .cert-meta{font-size:.74rem;color:var(--t3)}
 .cert-view-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--brd);background:rgba(255,255,255,.04);color:var(--t2);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
 .cert-view-btn:hover{background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.3);color:var(--acc)}
@@ -429,13 +429,13 @@ section:nth-child(even){background:var(--bg2)}
 .anim.in{opacity:1;transform:translateY(0)}
 
 /* ── RESPONSIVE ───────────────────────────────────────────── */
-@media(max-width:1200px){
-    .hcard{width:240px}
-}
+
+/* ── TABLET 1024px ─────────────────────────────────────── */
 @media(max-width:1024px){
     #topnav .tn-links,#topnav .btn-primary{display:none}
     .tn-burger{display:flex}
     .tn-mobile{display:flex}
+    .tn-mobile a{padding:14px 28px}
     .h-body{padding:80px 32px 24px}
     .h-cards-row{grid-template-columns:repeat(2,1fr)}
     .about-card{grid-template-columns:1fr;min-height:auto}
@@ -448,14 +448,101 @@ section:nth-child(even){background:var(--bg2)}
     .proj-grid{grid-template-columns:repeat(2,1fr)}
     section{padding:72px 32px}
 }
+
+/* ── MOBILE 640px ──────────────────────────────────────── */
 @media(max-width:640px){
-    section{padding:60px 20px}
-    .h-body{padding:80px 20px 20px}
-    .h-name{font-size:clamp(2rem,9vw,4rem)}
-    .h-cards-row{grid-template-columns:1fr 1fr}
+    /* Sections */
+    section{padding:56px 18px;overflow:hidden}
+    .sec-tag-row{margin-bottom:36px}
+    .sec-h{font-size:clamp(1.6rem,6.5vw,2.2rem)}
+
+    /* Hero */
+    .h-body{padding:72px 18px 14px}
+    .h-domain{display:none}
+    .h-top{gap:8px}
+    .h-name{font-size:clamp(2rem,9.5vw,3.5rem);margin-bottom:6px}
+
+    /* Hero cards: carousel orizzontale con snap */
+    .h-cards-row{
+        display:flex;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+        gap:10px;
+        margin-bottom:10px;
+        padding-bottom:6px;
+        scrollbar-width:none;
+    }
+    .h-cards-row::-webkit-scrollbar{display:none}
+    .hfc{
+        flex:0 0 72vw;
+        max-width:280px;
+        scroll-snap-align:start;
+        padding:14px 16px;
+        border-radius:14px;
+    }
+
+    /* Nascondi scroll indicator: intuitive su touch */
+    .h-scroll-down{display:none}
+
+    /* About */
+    .about-img-col{height:220px}
+    .about-text-col{padding:26px 20px;gap:16px}
+    .stat-v{font-size:1.8rem}
+    .stat-card{padding:14px 12px}
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+
+    /* Experience */
+    .exp-header{margin-bottom:28px}
+    .exp-item{grid-template-columns:24px 1fr}
+    .exp-item-dot{width:11px;height:11px}
+    .exp-item-card{margin-left:12px;padding:18px 16px;margin-bottom:18px}
+    .exp-item-head{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:10px}
+    .exp-item-per{align-self:flex-start}
+    .exp-item-co{font-size:1.05rem}
+    .exp-item-desc{font-size:.82rem}
+
+    /* Skills */
+    .skills-layout{gap:24px}
+    .sdot{gap:8px}
+    .pip{width:8px;height:8px}
+    .dots{gap:3px}
+    .sdot span:first-child{flex:1;min-width:0}
+
+    /* CV */
+    .cv-main-card{padding:28px 22px;min-height:auto}
+    .cv-main-btns{flex-direction:column;gap:10px}
+    .cv-main-btns .btn-primary,
+    .cv-main-btns .btn-outline{justify-content:center;width:100%}
+    .cv-cert-card{padding:22px 18px}
+    .cert-name{font-size:.82rem}
+    .cert-view-btn{width:30px;height:30px;flex-shrink:0;margin-top:1px}
+
+    /* Projects */
+    .proj-header{flex-direction:column;align-items:flex-start;gap:14px}
     .proj-grid{grid-template-columns:1fr}
-    .stats-grid{grid-template-columns:repeat(2,1fr)}
-    .about-img-col{height:240px}
-    .cv-main-card{padding:36px 28px;min-height:auto}
-    .proj-nda-inner{padding:44px 28px}
+    .proj-nda-inner{padding:36px 22px}
+
+    /* Contact */
+    .contact-top{gap:24px}
+    .contact-big-h{font-size:clamp(1.5rem,7vw,2.2rem);margin-top:12px}
+    .ccard{padding:14px 16px;gap:12px}
+    .ccard-ico{width:36px;height:36px}
+    .contact-socials-row{flex-direction:column;gap:10px}
+    .soc-link{justify-content:center}
+
+    /* PDF Modal */
+    .pdf-modal-box{height:92vh;border-radius:12px}
+    .modal{padding:10px}
+}
+
+/* ── SMALL PHONES 400px ─────────────────────────────────── */
+@media(max-width:400px){
+    .h-name{font-size:clamp(1.8rem,9vw,2.8rem)}
+    .hfc{flex:0 0 80vw}
+    .tags{gap:5px}
+    .tag{font-size:.65rem;padding:3px 9px}
+    .btn-primary,.btn-outline{font-size:.82rem;padding:11px 18px}
+    .exp-item-card{padding:15px 13px}
+    .ccard-val{font-size:.82rem}
 }
