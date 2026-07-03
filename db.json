@@ -214,6 +214,12 @@
     },
     "certifications": [
         {
+            "name": "Gestione Ticket (Basic)",
+            "issuer": "VTENEXT Srl",
+            "date": "2026",
+            "file": "certs/gestioneTicketVteNext.pdf"
+        },
+        {
             "name": "Anagrafiche e ciclo acquisizione cliente",
             "issuer": "VTENEXT Srl",
             "date": "2025",
