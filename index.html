@@ -593,11 +593,17 @@ function initScrollFX(){
 
     const topnav = document.getElementById('topnav');
     const progressEl = document.getElementById('scroll-progress');
+    const heroBg = document.querySelector('.h-bg');
+    const heroEl = document.getElementById('hero');
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
     let ticking = false;
     function onScroll(){
         topnav.classList.toggle('scrolled', window.scrollY>60);
         const max = document.documentElement.scrollHeight - window.innerHeight;
         progressEl.style.width = (max>0 ? Math.min(window.scrollY/max,1)*100 : 0) + '%';
+        if(!reduceMotion && heroBg && window.scrollY < heroEl.offsetHeight){
+            heroBg.style.transform = `translateY(${window.scrollY*0.1}px)`;
+        }
         ticking = false;
     }
     window.addEventListener('scroll',()=>{
