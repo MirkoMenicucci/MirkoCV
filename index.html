@@ -577,6 +577,20 @@ function initObs(){
     document.querySelectorAll('.hfstat-v, .stat-v').forEach(el=>co.observe(el));
 }
 
+/* ── SCROLL FX (active nav) ─────────────────────────────── */
+function initScrollFX(){
+    const navLinks = document.querySelectorAll('.tn-link');
+    const so = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(!entry.isIntersecting) return;
+            navLinks.forEach(link=>{
+                link.classList.toggle('active', link.getAttribute('href')==='#'+entry.target.id);
+            });
+        });
+    },{rootMargin:'-45% 0px -45% 0px',threshold:0});
+    document.querySelectorAll('main > section[id]').forEach(sec=>so.observe(sec));
+}
+
 /* ── TOP NAV ─────────────────────────────────────────── */
 window.addEventListener('scroll',()=>{
     document.getElementById('topnav').classList.toggle('scrolled',window.scrollY>60);
@@ -610,6 +624,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     lucide.createIcons();
     loadData().catch(console.error);
     runIntro();
+    initScrollFX();
 });
 </script>
 </body>
