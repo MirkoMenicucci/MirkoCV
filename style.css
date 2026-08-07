@@ -1,16 +1,42 @@
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root{
+    --bg:    #FFFFFF;
+    --bg2:   #F6F7F9;
+    --sur:   rgba(10,10,15,.035);
+    --brd:   rgba(10,10,15,.09);
+    --t1:    #0A0A0F;
+    --t2:    #545B6B;
+    --t3:    #9AA0AC;
+    --wm:    rgba(10,10,15,.03);
+    --scrollbar-thumb: #D7DAE0;
+    --acc:   #2563EB;
+    --acl:   #3B82F6;
+    --agl:   rgba(37,99,235,.32);
+    --ease:  cubic-bezier(.22,1,.36,1);
+}
+@media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+        --bg:    #0A0A0F;
+        --bg2:   #0E0E16;
+        --sur:   rgba(255,255,255,.04);
+        --brd:   rgba(255,255,255,.08);
+        --t1:    #FFFFFF;
+        --t2:    #8A909F;
+        --t3:    #3E4455;
+        --wm:    rgba(255,255,255,.025);
+        --scrollbar-thumb: #1e2535;
+    }
+}
+:root[data-theme="dark"]{
     --bg:    #0A0A0F;
     --bg2:   #0E0E16;
     --sur:   rgba(255,255,255,.04);
     --brd:   rgba(255,255,255,.08);
-    --acc:   #2563EB;
-    --acl:   #3B82F6;
-    --agl:   rgba(37,99,235,.32);
     --t1:    #FFFFFF;
     --t2:    #8A909F;
     --t3:    #3E4455;
-    --ease:  cubic-bezier(.22,1,.36,1);
+    --wm:    rgba(255,255,255,.025);
+    --scrollbar-thumb: #1e2535;
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -24,7 +50,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;color:inhe
 ul{list-style:none}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:#1e2535;border-radius:10px}
+::-webkit-scrollbar-thumb{background:var(--scrollbar-thumb);border-radius:10px}
 ::-webkit-scrollbar-thumb:hover{background:var(--acc)}
 
 /* ── UTILITY ─────────────────────────────────────────────── */
@@ -229,7 +255,7 @@ section:nth-child(even){background:var(--bg2)}
     position:absolute;bottom:-30px;right:-10px;
     font-size:clamp(5rem,14vw,16rem);
     font-weight:900;letter-spacing:-.05em;line-height:1;
-    color:rgba(255,255,255,.025);
+    color:var(--wm);
     pointer-events:none;user-select:none;
     z-index:0;white-space:nowrap;
 }
