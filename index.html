@@ -147,16 +147,18 @@
         <a href="#projects"   class="tn-link">Projects</a>
         <a href="#contact"    class="tn-link">Contact</a>
     </div>
-    <button class="btn-primary btn-sm" onclick="openPDF('cv.pdf','Curriculum Vitae','CV_Mirko_Menicucci.pdf')">
-        <i data-lucide="download" class="isz"></i> CV
-    </button>
-    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Cambia tema chiaro/scuro">
-        <i data-lucide="sun" class="icon-sun"></i>
-        <i data-lucide="moon" class="icon-moon"></i>
-    </button>
-    <button class="tn-burger" id="tn-burger" onclick="toggleMenu()" aria-label="Menu">
-        <i data-lucide="menu"></i>
-    </button>
+    <div class="tn-actions">
+        <button class="btn-primary btn-sm" onclick="openPDF('cv.pdf','Curriculum Vitae','CV_Mirko_Menicucci.pdf')">
+            <i data-lucide="download" class="isz"></i> CV
+        </button>
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Cambia tema chiaro/scuro">
+            <i data-lucide="sun" class="icon-sun"></i>
+            <i data-lucide="moon" class="icon-moon"></i>
+        </button>
+        <button class="tn-burger" id="tn-burger" onclick="toggleMenu()" aria-label="Menu">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
 </nav>
 <div id="scroll-progress" aria-hidden="true"></div>
 <div class="tn-mobile" id="tn-mobile">
@@ -205,7 +207,7 @@
         <!-- Card floating row — in basso sulla foto -->
         <div class="h-cards-row">
 
-            <div class="hfc glass">
+            <div class="hfc">
                 <p class="hfc-label"><em>ABOUT</em> ME</p>
                 <div class="hfc-stats">
                     <div class="hfstat"><span class="hfstat-v">8+</span><span class="hfstat-l">anni</span></div>
@@ -215,17 +217,17 @@
                 <p class="hfc-text" id="h-about-short"></p>
             </div>
 
-            <div class="hfc glass">
+            <div class="hfc">
                 <p class="hfc-label"><em>EXPERIENCE</em></p>
                 <div class="hfc-timeline" id="h-exp-list"></div>
             </div>
 
-            <div class="hfc glass">
+            <div class="hfc">
                 <p class="hfc-label"><em>SKILLS</em></p>
                 <ul class="hfc-list" id="h-skills-list"></ul>
             </div>
 
-            <div class="hfc glass">
+            <div class="hfc">
                 <p class="hfc-label"><em>AI</em> FOCUS</p>
                 <p class="hfc-text">Uso l'AI per automatizzare i processi aziendali più lenti e ripetitivi, in modo che i sistemi lavorino in autonomia. È uno strumento che affianca le mie competenze tecniche: mi permette di consegnare i progetti più rapidamente e con un'analisi dei dati più accurata.</p>
             </div>
