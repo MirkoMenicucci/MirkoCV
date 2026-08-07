@@ -535,6 +535,13 @@ function startTyping(main, alts) {
     tick();
 }
 
+/* ── LOAD INTRO ──────────────────────────────────────── */
+function runIntro(){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        document.body.classList.add('loaded');
+    }));
+}
+
 /* ── OBSERVERS ───────────────────────────────────────── */
 function initObs(){
     const ao=new IntersectionObserver(e=>e.forEach(x=>{
@@ -580,6 +587,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closePDF();});
 document.addEventListener('DOMContentLoaded',()=>{
     lucide.createIcons();
     loadData().catch(console.error);
+    runIntro();
 });
 </script>
 </body>
