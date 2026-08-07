@@ -17,13 +17,13 @@
         }
     },
     "summary": {
-        "text": "Full Stack Developer con 8 anni di esperienza. Dalla grafica al database, dall'interfaccia alla sicurezza — costruisco prodotti digitali completi partendo da zero. Oggi mi specializzo nell'integrare l'AI nei processi aziendali per automatizzare ciò che rallenta le persone."
+        "text": "Full Stack Developer con 8 anni di esperienza. Costruisco prodotti digitali completi partendo da zero: grafica, database, interfaccia, sicurezza. Negli ultimi anni mi sono specializzato nell'integrazione dell'AI nei processi aziendali, per automatizzare i flussi che rallentano il lavoro delle persone."
     },
     "about": {
         "photo": "setup.jpg",
         "quote": "Nel mezzo della difficoltà nasce l'opportunità.",
         "quote_author": "Albert Einstein",
-        "description": "Sono un Full Stack Developer con 8 anni di esperienza sul campo. Controllo l'intero stack: dall'interfaccia grafica — che progetto e sviluppo in autonomia — all'architettura del database, dalla logica applicativa alla gestione della sicurezza. Nessuna parte delegata a caso.\n\nHo vissuto anni di bullismo a scuola e invece di fermarmi, quella difficoltà mi ha insegnato la resilienza che oggi porto in ogni progetto.\n\nMi sto specializzando sull'integrazione dell'AI nei processi aziendali: individuo i flussi lenti e ripetitivi e li trasformo in sistemi che lavorano in autonomia.\n\nHo 25 anni, sono sposato e sto costruendo la mia famiglia. La stessa serietà che metto nella vita, la metto nel lavoro.",
+        "description": "Sono un Full Stack Developer con 8 anni di esperienza sul campo. Gestisco l'intero stack in autonomia: progetto e sviluppo l'interfaccia grafica, costruisco l'architettura del database, scrivo la logica applicativa e mi occupo della sicurezza.\n\nA scuola ho subito bullismo per diversi anni. Non mi sono fermato, e da quel periodo porto ancora oggi la capacità di restare concentrato quando le cose si complicano.\n\nMi sto specializzando nell'integrazione dell'AI nei processi aziendali. Individuo i flussi di lavoro lenti e ripetitivi e li trasformo in sistemi automatici.\n\nHo 25 anni, sono sposato e sto costruendo la mia famiglia. Nel lavoro porto lo stesso impegno.",
         "stats": [
             {
                 "value": "8+",
@@ -47,22 +47,22 @@
         {
             "icon": "layers",
             "title": "Full Stack, tutto lo stack",
-            "description": "Grafica, interfaccia, logica, database, sicurezza: sviluppo prodotti digitali completi in autonomia, senza delegare niente a nessuno."
+            "description": "Sviluppo da solo ogni parte del prodotto: grafica, interfaccia, logica applicativa, database e sicurezza."
         },
         {
             "icon": "bot",
             "title": "AI nei processi aziendali",
-            "description": "Integro l'intelligenza artificiale dove crea valore: elimino flussi lenti e ripetitivi, automatizzo la raccolta dati e accelero la digitalizzazione."
+            "description": "Integro l'intelligenza artificiale nei processi che rallentano il lavoro: automatizzo la raccolta dati e i flussi ripetitivi, per accelerare la digitalizzazione aziendale."
         },
         {
             "icon": "plug",
             "title": "Integrazioni & API",
-            "description": "Collego qualsiasi sistema: gestionali, e-commerce, CRM, pagamenti (PayPal, Stripe, Nexi, SDI). Ogni dato al posto giusto."
+            "description": "Collego gestionali, e-commerce, CRM e sistemi di pagamento (PayPal, Stripe, Nexi, SDI), così i dati passano da un sistema all'altro senza intervento manuale."
         },
         {
             "icon": "palette",
             "title": "UI Design & Grafica",
-            "description": "Non solo codice — progetto anche l'interfaccia. Photoshop, Lightroom e CSS avanzato per prodotti che funzionano e che si vedono bene."
+            "description": "Oltre al codice, progetto anche l'interfaccia grafica con Photoshop, Lightroom e CSS avanzato, per prodotti curati sia nella funzione che nell'estetica."
         }
     ],
     "work_experience": [
@@ -71,7 +71,7 @@
             "location": "Rome (RM)",
             "role": "CRM Consultant & Plugin Developer & Full Stack Developer",
             "period": "2024 — In corso",
-            "description": "Sviluppo full stack di applicazioni web, plugin personalizzati per il CRM VTENEXT con integrazione di servizi esterni, integrazione di sistemi AI nei workflow aziendali, automazione di processi ripetitivi e consulenza sulla digitalizzazione.",
+            "description": "Sviluppo full stack di applicazioni web e plugin personalizzati per il CRM VTENEXT, con integrazione di servizi esterni e di sistemi AI nei workflow aziendali. Mi occupo inoltre di automazione dei processi ripetitivi e di consulenza sulla digitalizzazione.",
             "tech_tags": [
                 "AI Integration",
                 "CRM Consultation",
@@ -114,7 +114,7 @@
             "location": "Arezzo (AR)",
             "role": "Operatore Tecnico",
             "period": "2018 — 2019",
-            "description": "Prima del percorso informatico: esperienza manuale che ha costruito precisione, pianificazione e capacità di tradurre concetti complessi in risultati concreti.",
+            "description": "Esperienza precedente al percorso informatico, nella lavorazione manuale del legno. Mi ha insegnato precisione, pianificazione e a tradurre progetti complessi in risultati concreti.",
             "tech_tags": [
                 "Problem Solving",
                 "Precisione",
