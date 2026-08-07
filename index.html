@@ -553,6 +553,28 @@ function initObs(){
         if(x.isIntersecting){x.target.style.width=x.target.dataset.p+'%';fo.unobserve(x.target);}
     }),{threshold:.3});
     document.querySelectorAll('.sfill').forEach(el=>fo.observe(el));
+
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const co=new IntersectionObserver(e=>e.forEach(x=>{
+        if(!x.isIntersecting) return;
+        co.unobserve(x.target);
+        const el = x.target;
+        const raw = el.textContent.trim();
+        const m = raw.match(/^(\d+(?:\.\d+)?)(.*)$/);
+        if(!m) return;
+        const target = parseFloat(m[1]);
+        const suffix = m[2];
+        if(reduceMotion){ el.textContent = raw; return; }
+        const dur = 1200, start = performance.now();
+        (function tick(now){
+            const p = Math.min((now-start)/dur,1);
+            const eased = 1-Math.pow(1-p,3);
+            el.textContent = Math.round(target*eased) + suffix;
+            if(p<1) requestAnimationFrame(tick);
+            else el.textContent = target + suffix;
+        })(start);
+    }),{threshold:.5});
+    document.querySelectorAll('.hfstat-v, .stat-v').forEach(el=>co.observe(el));
 }
 
 /* ── TOP NAV ─────────────────────────────────────────── */
