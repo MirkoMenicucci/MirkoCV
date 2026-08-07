@@ -520,6 +520,11 @@ async function loadData() {
     lucide.createIcons();
     initObs();
     startTyping(pi.title, pi.alt_titles||[]);
+    // Content just populated the page — scroll-height-dependent measurements
+    // (progress bar max, hero height) captured at DOMContentLoaded are now
+    // stale. Re-run initScrollFX()'s measure()/onScroll() via the resize
+    // listener it already registers, without restructuring its scope.
+    window.dispatchEvent(new Event('resize'));
 }
 
 /* ── TYPING ───────────────────────────────────────────── */
@@ -597,18 +602,25 @@ function initScrollFX(){
     const heroEl = document.getElementById('hero');
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
     let ticking = false;
+    let docMax = 0, heroH = 0;
+    function measure(){
+        docMax = document.documentElement.scrollHeight - window.innerHeight;
+        heroH  = heroEl ? heroEl.offsetHeight : 0;
+    }
     function onScroll(){
-        topnav.classList.toggle('scrolled', window.scrollY>60);
-        const max = document.documentElement.scrollHeight - window.innerHeight;
-        progressEl.style.width = (max>0 ? Math.min(window.scrollY/max,1)*100 : 0) + '%';
-        if(!reduceMotion && heroBg && window.scrollY < heroEl.offsetHeight){
-            heroBg.style.transform = `translateY(${window.scrollY*0.1}px)`;
+        const y = window.scrollY;
+        topnav.classList.toggle('scrolled', y>60);
+        progressEl.style.width = (docMax>0 ? Math.min(y/docMax,1)*100 : 0) + '%';
+        if(!reduceMotion && heroBg && y < heroH){
+            heroBg.style.transform = `translateY(${y*0.1}px)`;
         }
         ticking = false;
     }
     window.addEventListener('scroll',()=>{
         if(!ticking){ requestAnimationFrame(onScroll); ticking = true; }
     },{passive:true});
+    window.addEventListener('resize', ()=>{ measure(); onScroll(); },{passive:true});
+    measure();
     onScroll();
 }
 
@@ -639,10 +651,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closePDF();});
 
 /* ── INIT ────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded',()=>{
-    lucide.createIcons();
-    loadData().catch(console.error);
     runIntro();
     initScrollFX();
+    try{ lucide.createIcons(); }catch(e){ console.error(e); }
+    loadData().catch(console.error);
 });
 </script>
 </body>

@@ -439,13 +439,13 @@ section:nth-child(even){background:var(--bg2)}
     body:not(.loaded) .h-cards-row .hfc,
     body:not(.loaded) .h-scroll-down{opacity:0}
 
-    body.loaded #topnav{animation:introDown .6s var(--ease) .05s forwards}
-    body.loaded .h-top{animation:introUp .7s var(--ease) .35s forwards}
-    body.loaded .h-cards-row .hfc:nth-child(1){animation:introUp .7s var(--ease) .55s forwards}
-    body.loaded .h-cards-row .hfc:nth-child(2){animation:introUp .7s var(--ease) .65s forwards}
-    body.loaded .h-cards-row .hfc:nth-child(3){animation:introUp .7s var(--ease) .75s forwards}
-    body.loaded .h-cards-row .hfc:nth-child(4){animation:introUp .7s var(--ease) .85s forwards}
-    body.loaded .h-scroll-down{animation:introFade .6s var(--ease) 1.05s forwards}
+    body.loaded #topnav{animation:introDown .6s var(--ease) .05s backwards}
+    body.loaded .h-top{animation:introUp .7s var(--ease) .35s backwards}
+    body.loaded .h-cards-row .hfc:nth-child(1){animation:introUp .7s var(--ease) .55s backwards}
+    body.loaded .h-cards-row .hfc:nth-child(2){animation:introUp .7s var(--ease) .65s backwards}
+    body.loaded .h-cards-row .hfc:nth-child(3){animation:introUp .7s var(--ease) .75s backwards}
+    body.loaded .h-cards-row .hfc:nth-child(4){animation:introUp .7s var(--ease) .85s backwards}
+    body.loaded .h-scroll-down{animation:introFade .6s var(--ease) 1.05s backwards}
 }
 @keyframes introDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes introUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
