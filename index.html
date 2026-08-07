@@ -153,6 +153,7 @@
         <i data-lucide="menu"></i>
     </button>
 </nav>
+<div id="scroll-progress" aria-hidden="true"></div>
 <div class="tn-mobile" id="tn-mobile">
     <a href="#about"      onclick="closeMenu()">About</a>
     <a href="#experience" onclick="closeMenu()">Experience</a>
@@ -589,12 +590,23 @@ function initScrollFX(){
         });
     },{rootMargin:'-45% 0px -45% 0px',threshold:0});
     document.querySelectorAll('main > section[id]').forEach(sec=>so.observe(sec));
+
+    const topnav = document.getElementById('topnav');
+    const progressEl = document.getElementById('scroll-progress');
+    let ticking = false;
+    function onScroll(){
+        topnav.classList.toggle('scrolled', window.scrollY>60);
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        progressEl.style.width = (max>0 ? Math.min(window.scrollY/max,1)*100 : 0) + '%';
+        ticking = false;
+    }
+    window.addEventListener('scroll',()=>{
+        if(!ticking){ requestAnimationFrame(onScroll); ticking = true; }
+    },{passive:true});
+    onScroll();
 }
 
 /* ── TOP NAV ─────────────────────────────────────────── */
-window.addEventListener('scroll',()=>{
-    document.getElementById('topnav').classList.toggle('scrolled',window.scrollY>60);
-},{passive:true});
 function toggleMenu(){
     document.getElementById('tn-mobile').classList.toggle('open');
 }
