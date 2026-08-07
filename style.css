@@ -39,6 +39,24 @@
     --scrollbar-thumb: #1e2535;
 }
 
+/* ── LIGHT-THEME OVERRIDES (selectors with no dark/light token today) ── */
+@media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .strack{background:rgba(10,10,15,.06)}
+    :root:not([data-theme="dark"]) .pip{background:rgba(10,10,15,.07);border-color:rgba(10,10,15,.1)}
+    :root:not([data-theme="dark"]) .proj-img{background:rgba(10,10,15,.03)}
+    :root:not([data-theme="dark"]) .cert-view-btn{background:rgba(10,10,15,.04)}
+    :root:not([data-theme="dark"]) .modal-x{background:rgba(10,10,15,.07)}
+    :root:not([data-theme="dark"]) .modal-x:hover{background:rgba(10,10,15,.14)}
+    :root:not([data-theme="dark"]) .btn-outline:hover{border-color:rgba(10,10,15,.25);background:rgba(10,10,15,.05)}
+}
+[data-theme="light"] .strack{background:rgba(10,10,15,.06)}
+[data-theme="light"] .pip{background:rgba(10,10,15,.07);border-color:rgba(10,10,15,.1)}
+[data-theme="light"] .proj-img{background:rgba(10,10,15,.03)}
+[data-theme="light"] .cert-view-btn{background:rgba(10,10,15,.04)}
+[data-theme="light"] .modal-x{background:rgba(10,10,15,.07)}
+[data-theme="light"] .modal-x:hover{background:rgba(10,10,15,.14)}
+[data-theme="light"] .btn-outline:hover{border-color:rgba(10,10,15,.25);background:rgba(10,10,15,.05)}
+
 /* ── RESET ───────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
