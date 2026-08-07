@@ -103,6 +103,18 @@ em{font-style:normal;color:var(--acc)}
 .tn-mobile.open{max-height:320px}
 .tn-mobile a{padding:16px 48px;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.08);transition:color .2s,background .2s}
 .tn-mobile a:hover{color:#fff;background:rgba(255,255,255,.04)}
+.theme-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:#fff;border-radius:8px;flex-shrink:0;transition:background .2s}
+.theme-toggle:hover{background:rgba(255,255,255,.08)}
+.theme-toggle svg{width:18px;height:18px}
+.icon-sun{display:none}
+@media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .icon-sun{display:block}
+    :root:not([data-theme="light"]) .icon-moon{display:none}
+}
+[data-theme="dark"] .icon-sun{display:block}
+[data-theme="dark"] .icon-moon{display:none}
+[data-theme="light"] .icon-sun{display:none}
+[data-theme="light"] .icon-moon{display:block}
 
 /* ── HERO — foto full-screen, nome medium, card floating ─── */
 #hero{

@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <script>(function(){var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ── SEO BASE ───────────────────────────────────────── -->
@@ -148,6 +149,10 @@
     </div>
     <button class="btn-primary btn-sm" onclick="openPDF('cv.pdf','Curriculum Vitae','CV_Mirko_Menicucci.pdf')">
         <i data-lucide="download" class="isz"></i> CV
+    </button>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Cambia tema chiaro/scuro">
+        <i data-lucide="sun" class="icon-sun"></i>
+        <i data-lucide="moon" class="icon-moon"></i>
     </button>
     <button class="tn-burger" id="tn-burger" onclick="toggleMenu()" aria-label="Menu">
         <i data-lucide="menu"></i>
@@ -630,6 +635,15 @@ function toggleMenu(){
 }
 function closeMenu(){
     document.getElementById('tn-mobile').classList.remove('open');
+}
+
+/* ── THEME TOGGLE ────────────────────────────────────── */
+function toggleTheme(){
+    const current = document.documentElement.getAttribute('data-theme')
+        || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
 }
 
 /* ── PDF MODAL ───────────────────────────────────────── */
