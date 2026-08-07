@@ -434,11 +434,13 @@ section:nth-child(even){background:var(--bg2)}
 
 /* ── LOAD INTRO (requires JS to add .loaded to <body>) ────── */
 @media (prefers-reduced-motion: no-preference){
+    body:not(.loaded) .h-bg,
     body:not(.loaded) #topnav,
     body:not(.loaded) .h-top,
     body:not(.loaded) .h-cards-row .hfc,
     body:not(.loaded) .h-scroll-down{opacity:0}
 
+    body.loaded .h-bg{animation:introFade 1.2s var(--ease) backwards}
     body.loaded #topnav{animation:introDown .6s var(--ease) .05s backwards}
     body.loaded .h-top{animation:introUp .7s var(--ease) .35s backwards}
     body.loaded .h-cards-row .hfc:nth-child(1){animation:introUp .7s var(--ease) .55s backwards}
