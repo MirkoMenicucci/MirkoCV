@@ -22,6 +22,18 @@
     --modal-x-bg-hover:  rgba(10,10,15,.14);
     --outline-hover-bg:  rgba(10,10,15,.05);
     --outline-hover-brd: rgba(10,10,15,.25);
+    --hero-name-shadow:  rgba(0,0,0,.06);
+    --hero-sub:          rgba(10,10,15,.72);
+    --hero-sub-shadow:   rgba(0,0,0,.06);
+    --hero-domain:       rgba(10,10,15,.35);
+    --hero-card-bg:      rgba(10,10,15,.035);
+    --hero-card-brd:     rgba(10,10,15,.1);
+    --hero-card-label:   rgba(10,10,15,.5);
+    --hero-card-text:    rgba(10,10,15,.68);
+    --hero-stat-l:       rgba(10,10,15,.4);
+    --hero-exp-role:     rgba(10,10,15,.62);
+    --hero-exp-period:   rgba(10,10,15,.32);
+    --hero-sd-line:      rgba(10,10,15,.18);
     --ease:  cubic-bezier(.22,1,.36,1);
 }
 @media (prefers-color-scheme: dark){
@@ -45,6 +57,18 @@
         --modal-x-bg-hover:  rgba(255,255,255,.14);
         --outline-hover-bg:  rgba(255,255,255,.05);
         --outline-hover-brd: rgba(255,255,255,.25);
+        --hero-name-shadow:  rgba(0,0,0,.5);
+        --hero-sub:          rgba(255,255,255,.7);
+        --hero-sub-shadow:   rgba(0,0,0,.6);
+        --hero-domain:       rgba(255,255,255,.35);
+        --hero-card-bg:      rgba(255,255,255,.04);
+        --hero-card-brd:     rgba(255,255,255,.08);
+        --hero-card-label:   rgba(255,255,255,.45);
+        --hero-card-text:    rgba(255,255,255,.65);
+        --hero-stat-l:       rgba(255,255,255,.35);
+        --hero-exp-role:     rgba(255,255,255,.6);
+        --hero-exp-period:   rgba(255,255,255,.3);
+        --hero-sd-line:      rgba(255,255,255,.15);
     }
 }
 :root[data-theme="dark"]{
@@ -67,6 +91,18 @@
     --modal-x-bg-hover:  rgba(255,255,255,.14);
     --outline-hover-bg:  rgba(255,255,255,.05);
     --outline-hover-brd: rgba(255,255,255,.25);
+    --hero-name-shadow:  rgba(0,0,0,.5);
+    --hero-sub:          rgba(255,255,255,.7);
+    --hero-sub-shadow:   rgba(0,0,0,.6);
+    --hero-domain:       rgba(255,255,255,.35);
+    --hero-card-bg:      rgba(255,255,255,.04);
+    --hero-card-brd:     rgba(255,255,255,.08);
+    --hero-card-label:   rgba(255,255,255,.45);
+    --hero-card-text:    rgba(255,255,255,.65);
+    --hero-stat-l:       rgba(255,255,255,.35);
+    --hero-exp-role:     rgba(255,255,255,.6);
+    --hero-exp-period:   rgba(255,255,255,.3);
+    --hero-sd-line:      rgba(255,255,255,.15);
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -210,22 +246,25 @@ em{font-style:normal;color:var(--acc-text)}
     letter-spacing:-.04em;
     line-height:.92;
     margin-bottom:10px;
-    text-shadow:0 2px 20px rgba(0,0,0,.5);
+    text-shadow:0 2px 20px var(--hero-name-shadow);
+    transition:color .8s ease,text-shadow .8s ease;
 }
 .h-name span{display:block}
 .h-orange{color:var(--acc)}
 .h-subtitle{
     display:inline-flex;align-items:center;gap:3px;
     font-size:clamp(.75rem,1vw,.95rem);
-    font-weight:600;color:rgba(255,255,255,.7);
+    font-weight:600;color:var(--hero-sub);
     letter-spacing:.06em;text-transform:uppercase;
-    text-shadow:0 1px 8px rgba(0,0,0,.6);
+    text-shadow:0 1px 8px var(--hero-sub-shadow);
+    transition:color .8s ease,text-shadow .8s ease;
 }
 .h-cur{color:var(--acc);animation:blink 1s step-end infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 .h-domain{
-    font-size:.65rem;font-weight:500;color:rgba(255,255,255,.35);
+    font-size:.65rem;font-weight:500;color:var(--hero-domain);
     writing-mode:vertical-rl;padding-top:4px;letter-spacing:.1em;flex-shrink:0;
+    transition:color .8s ease;
 }
 
 /* Spacer: zona dove si vede la foto */
@@ -239,13 +278,13 @@ em{font-style:normal;color:var(--acc-text)}
     margin-bottom:18px;
 }
 .hfc{
-    background:rgba(255,255,255,.04);
+    background:var(--hero-card-bg);
     backdrop-filter:blur(16px);
     -webkit-backdrop-filter:blur(16px);
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--hero-card-brd);
     border-radius:14px;
     padding:16px 18px;
-    transition:border-color .3s,transform .3s var(--ease),box-shadow .3s;
+    transition:border-color .3s,transform .3s var(--ease),box-shadow .3s,background-color .3s;
 }
 .hfc:hover{
     border-color:rgba(37,99,235,.4);
@@ -255,22 +294,23 @@ em{font-style:normal;color:var(--acc-text)}
 .hfc-label{
     font-size:.62rem;font-weight:700;
     text-transform:uppercase;letter-spacing:.12em;
-    color:rgba(255,255,255,.45);margin-bottom:10px;
+    color:var(--hero-card-label);margin-bottom:10px;
+    transition:color .8s ease;
 }
 .hfc-label em{color:var(--acc);font-style:normal}
-.hfc-text{font-size:.76rem;color:rgba(255,255,255,.65);line-height:1.6}
+.hfc-text{font-size:.76rem;color:var(--hero-card-text);line-height:1.6;transition:color .8s ease}
 .hfc-stats{display:flex;gap:12px;margin-bottom:10px}
 .hfstat{display:flex;flex-direction:column;gap:1px}
 .hfstat-v{font-size:1.6rem;font-weight:900;letter-spacing:-.04em;color:var(--acc);line-height:1}
-.hfstat-l{font-size:.58rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.07em}
+.hfstat-l{font-size:.58rem;color:var(--hero-stat-l);text-transform:uppercase;letter-spacing:.07em;transition:color .8s ease}
 .hfc-list{display:flex;flex-direction:column;gap:5px}
-.hfc-list li{display:flex;align-items:center;gap:6px;font-size:.76rem;color:rgba(255,255,255,.65)}
+.hfc-list li{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--hero-card-text);transition:color .8s ease}
 .hfc-list svg{color:var(--acc);flex-shrink:0;width:12px;height:12px}
 .hfc-timeline{display:flex;flex-direction:column;gap:8px}
 .hcard-exp-item{border-left:2px solid rgba(37,99,235,.35);padding-left:9px;display:flex;flex-direction:column;gap:1px}
 .hcard-exp-co{font-size:.8rem;font-weight:700;color:var(--acc)}
-.hcard-exp-role{font-size:.71rem;color:rgba(255,255,255,.6)}
-.hcard-exp-period{font-size:.63rem;color:rgba(255,255,255,.3)}
+.hcard-exp-role{font-size:.71rem;color:var(--hero-exp-role);transition:color .8s ease}
+.hcard-exp-period{font-size:.63rem;color:var(--hero-exp-period);transition:color .8s ease}
 
 .h-scroll-down{
     align-self:center;
@@ -283,14 +323,16 @@ em{font-style:normal;color:var(--acc-text)}
 .hsd-label{
     font-size:.62rem;font-weight:700;
     letter-spacing:.2em;text-transform:uppercase;
-    color:rgba(255,255,255,.45);
+    color:var(--hero-card-label);
+    transition:color .8s ease;
 }
 .hsd-line{
     width:1px;height:52px;
-    background:rgba(255,255,255,.15);
+    background:var(--hero-sd-line);
     border-radius:1px;
     position:relative;
     overflow:hidden;
+    transition:background-color .8s ease;
 }
 .hsd-dot{
     position:absolute;
