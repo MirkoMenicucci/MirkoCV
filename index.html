@@ -177,12 +177,17 @@
 ════════════════════════════════════════════════════ -->
 <section id="hero">
 
-    <!-- Foto full-screen come soggetto principale -->
-    <img src="profile.jpg" class="h-bg" alt="Mirko Menicucci"
-         onerror="this.style.opacity='0'">
+    <!-- Foto full-screen come soggetto principale — crossfade dark/light -->
+    <div class="h-bg-wrap">
+        <img src="profile.jpg" class="h-bg h-bg-dark" alt="Mirko Menicucci"
+             onerror="this.style.opacity='0'">
+        <img src="profile-li.jpg" class="h-bg h-bg-light" alt="Mirko Menicucci"
+             onerror="this.style.opacity='0'">
+    </div>
 
-    <!-- Overlay: leggero al centro, scuro in alto e in basso -->
-    <div class="h-overlay" aria-hidden="true"></div>
+    <!-- Overlay: leggero al centro, scuro/chiaro in alto e in basso a seconda del tema -->
+    <div class="h-overlay h-overlay-dark" aria-hidden="true"></div>
+    <div class="h-overlay h-overlay-light" aria-hidden="true"></div>
 
     <!-- Tutto il contenuto sopra la foto -->
     <div class="h-body">
@@ -605,7 +610,7 @@ function initScrollFX(){
 
     const topnav = document.getElementById('topnav');
     const progressEl = document.getElementById('scroll-progress');
-    const heroBg = document.querySelector('.h-bg');
+    const heroBg = document.querySelector('.h-bg-wrap');
     const heroEl = document.getElementById('hero');
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
     let ticking = false;

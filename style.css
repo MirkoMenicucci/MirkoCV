@@ -139,7 +139,8 @@ em{font-style:normal;color:var(--acc-text)}
     flex-direction:column;
 }
 
-/* Foto full-screen */
+/* Foto full-screen — due livelli (dark/light) in crossfade */
+.h-bg-wrap{position:absolute;inset:0;z-index:0}
 .h-bg{
     position:absolute;
     inset:0;
@@ -147,12 +148,20 @@ em{font-style:normal;color:var(--acc-text)}
     height:100%;
     object-fit:cover;
     object-position:center 15%;
-    z-index:0;
+    transition:opacity .9s ease;
 }
+.h-bg-dark{opacity:1}
+.h-bg-light{opacity:0}
+@media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .h-bg-dark{opacity:0}
+    :root:not([data-theme="dark"]) .h-bg-light{opacity:1}
+}
+[data-theme="light"] .h-bg-dark{opacity:0}
+[data-theme="light"] .h-bg-light{opacity:1}
 
-/* Overlay: trasparente al centro, scuro in alto e in basso */
-.h-overlay{
-    position:absolute;inset:0;z-index:1;
+/* Overlay: trasparente al centro, scuro/chiaro in alto e in basso — due livelli in crossfade */
+.h-overlay{position:absolute;inset:0;z-index:1;transition:opacity .9s ease}
+.h-overlay-dark{
     background:
         linear-gradient(to bottom,
             rgba(10,10,15,.72) 0%,
@@ -160,7 +169,24 @@ em{font-style:normal;color:var(--acc-text)}
             rgba(10,10,15,.08) 58%,
             rgba(10,10,15,.88) 100%
         );
+    opacity:1;
 }
+.h-overlay-light{
+    background:
+        linear-gradient(to bottom,
+            rgba(255,255,255,.75) 0%,
+            rgba(255,255,255,.15) 30%,
+            rgba(255,255,255,.10) 58%,
+            rgba(255,255,255,.90) 100%
+        );
+    opacity:0;
+}
+@media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .h-overlay-dark{opacity:0}
+    :root:not([data-theme="dark"]) .h-overlay-light{opacity:1}
+}
+[data-theme="light"] .h-overlay-dark{opacity:0}
+[data-theme="light"] .h-overlay-light{opacity:1}
 
 /* Contenuto sopra la foto */
 .h-body{
@@ -507,13 +533,13 @@ section:nth-child(even){background:var(--bg2)}
 
 /* ── LOAD INTRO (requires JS to add .loaded to <body>) ────── */
 @media (prefers-reduced-motion: no-preference){
-    body:not(.loaded) .h-bg,
+    body:not(.loaded) .h-bg-wrap,
     body:not(.loaded) #topnav,
     body:not(.loaded) .h-top,
     body:not(.loaded) .h-cards-row .hfc,
     body:not(.loaded) .h-scroll-down{opacity:0}
 
-    body.loaded .h-bg{animation:introFade 1.2s var(--ease) backwards}
+    body.loaded .h-bg-wrap{animation:introFade 1.2s var(--ease) backwards}
     body.loaded #topnav{animation:introDown .6s var(--ease) .05s backwards}
     body.loaded .h-top{animation:introUp .7s var(--ease) .35s backwards}
     body.loaded .h-cards-row .hfc:nth-child(1){animation:introUp .7s var(--ease) .55s backwards}
