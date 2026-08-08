@@ -35,6 +35,8 @@
     --hero-exp-period:   rgba(10,10,15,.48);
     --hero-sd-line:      rgba(10,10,15,.18);
     --hero-card-shadow:  rgba(10,10,15,.14);
+    --nav-fg:            rgba(10,10,15,.6);
+    --nav-fg-strong:     rgba(10,10,15,.92);
     --ease:  cubic-bezier(.22,1,.36,1);
 }
 @media (prefers-color-scheme: dark){
@@ -71,6 +73,8 @@
         --hero-exp-period:   rgba(255,255,255,.3);
         --hero-sd-line:      rgba(255,255,255,.15);
         --hero-card-shadow:  rgba(0,0,0,.5);
+        --nav-fg:            rgba(255,255,255,.6);
+        --nav-fg-strong:     #FFFFFF;
     }
 }
 :root[data-theme="dark"]{
@@ -106,6 +110,8 @@
     --hero-exp-period:   rgba(255,255,255,.3);
     --hero-sd-line:      rgba(255,255,255,.15);
     --hero-card-shadow:  rgba(0,0,0,.5);
+    --nav-fg:            rgba(255,255,255,.6);
+    --nav-fg-strong:     #FFFFFF;
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -144,12 +150,17 @@ em{font-style:normal;color:var(--acc-text)}
 #scroll-progress{position:fixed;top:64px;left:0;height:2px;width:0;background:var(--acc);z-index:101;pointer-events:none}
 .tn-logo{font-size:1.3rem;font-weight:900;color:var(--acc);letter-spacing:-.02em}
 .tn-links{display:flex;gap:28px}
-.tn-link{position:relative;font-size:.85rem;font-weight:500;color:rgba(255,255,255,.6);transition:color .2s}
-.tn-link:hover{color:#fff}
+.tn-link{position:relative;font-size:.85rem;font-weight:500;color:var(--nav-fg);transition:color .2s}
+.tn-link:hover{color:var(--nav-fg-strong)}
 .tn-link::after{content:'';position:absolute;left:0;right:0;bottom:-20px;height:2px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
-.tn-link.active{color:#fff}
+.tn-link.active{color:var(--nav-fg-strong)}
 .tn-link.active::after{transform:scaleX(1)}
-.tn-burger{display:none;padding:8px;color:#fff;border-radius:8px}
+.tn-burger{display:none;padding:8px;color:var(--nav-fg-strong);border-radius:8px}
+/* Chrome sempre scuro una volta scrollata: forza sempre il bianco, in entrambi i temi */
+#topnav.scrolled .tn-link{color:rgba(255,255,255,.6)}
+#topnav.scrolled .tn-link:hover,
+#topnav.scrolled .tn-link.active,
+#topnav.scrolled .tn-burger{color:#fff}
 .tn-burger svg{width:20px;height:20px}
 .tn-mobile{display:none;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,15,.98);border-bottom:1px solid rgba(255,255,255,.08);z-index:99;max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
 .tn-mobile.open{max-height:320px}
