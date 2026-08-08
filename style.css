@@ -385,9 +385,22 @@ section:nth-child(even){background:var(--bg2)}
 /* ── ABOUT ────────────────────────────────────────────────── */
 .about-card{display:grid;grid-template-columns:42% 1fr;border-radius:24px;overflow:hidden;min-height:540px;position:relative;z-index:1}
 .about-img-col{position:relative;overflow:hidden}
-.about-img-col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s var(--ease)}
+.about-img-col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s var(--ease),opacity .9s ease}
 .about-img-col:hover img{transform:scale(1.05)}
 .about-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,99,235,.08),transparent 60%);pointer-events:none}
+
+/* Foto about — due livelli (dark/light) in crossfade, stesso pattern della hero */
+.about-photo-dark{opacity:1}
+.about-photo-light{opacity:0}
+@media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .about-photo-dark{opacity:0}
+    :root:not([data-theme="dark"]) .about-photo-light{opacity:1}
+}
+[data-theme="light"] .about-photo-dark{opacity:0}
+[data-theme="light"] .about-photo-light{opacity:1}
+@media (prefers-reduced-motion: reduce){
+    .about-photo-dark,.about-photo-light{transition:none}
+}
 .about-text-col{padding:52px 48px;display:flex;flex-direction:column;gap:22px;justify-content:center}
 .about-p{font-size:.88rem;color:var(--t2);line-height:1.9;white-space:pre-line}
 .about-quote{
