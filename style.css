@@ -25,15 +25,16 @@
     --hero-name-shadow:  rgba(0,0,0,.06);
     --hero-sub:          rgba(10,10,15,.72);
     --hero-sub-shadow:   rgba(0,0,0,.06);
-    --hero-domain:       rgba(10,10,15,.35);
+    --hero-domain:       rgba(10,10,15,.5);
     --hero-card-bg:      rgba(10,10,15,.035);
     --hero-card-brd:     rgba(10,10,15,.1);
-    --hero-card-label:   rgba(10,10,15,.5);
+    --hero-card-label:   rgba(10,10,15,.62);
     --hero-card-text:    rgba(10,10,15,.68);
-    --hero-stat-l:       rgba(10,10,15,.4);
+    --hero-stat-l:       rgba(10,10,15,.55);
     --hero-exp-role:     rgba(10,10,15,.62);
-    --hero-exp-period:   rgba(10,10,15,.32);
+    --hero-exp-period:   rgba(10,10,15,.48);
     --hero-sd-line:      rgba(10,10,15,.18);
+    --hero-card-shadow:  rgba(10,10,15,.14);
     --ease:  cubic-bezier(.22,1,.36,1);
 }
 @media (prefers-color-scheme: dark){
@@ -69,6 +70,7 @@
         --hero-exp-role:     rgba(255,255,255,.6);
         --hero-exp-period:   rgba(255,255,255,.3);
         --hero-sd-line:      rgba(255,255,255,.15);
+        --hero-card-shadow:  rgba(0,0,0,.5);
     }
 }
 :root[data-theme="dark"]{
@@ -103,6 +105,7 @@
     --hero-exp-role:     rgba(255,255,255,.6);
     --hero-exp-period:   rgba(255,255,255,.3);
     --hero-sd-line:      rgba(255,255,255,.15);
+    --hero-card-shadow:  rgba(0,0,0,.5);
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -224,6 +227,10 @@ em{font-style:normal;color:var(--acc-text)}
 [data-theme="light"] .h-overlay-dark{opacity:0}
 [data-theme="light"] .h-overlay-light{opacity:1}
 
+@media (prefers-reduced-motion: reduce){
+    .h-bg,.h-overlay{transition:none}
+}
+
 /* Contenuto sopra la foto */
 .h-body{
     position:relative;z-index:2;
@@ -289,7 +296,7 @@ em{font-style:normal;color:var(--acc-text)}
 .hfc:hover{
     border-color:rgba(37,99,235,.4);
     transform:translateY(-4px);
-    box-shadow:0 12px 32px rgba(0,0,0,.5);
+    box-shadow:0 12px 32px var(--hero-card-shadow);
 }
 .hfc-label{
     font-size:.62rem;font-weight:700;
