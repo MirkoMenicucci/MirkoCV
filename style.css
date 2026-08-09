@@ -166,8 +166,9 @@ em{font-style:normal;color:var(--acc-text)}
 .tn-mobile.open{max-height:320px}
 .tn-mobile a{padding:16px 48px;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.08);transition:color .2s,background .2s}
 .tn-mobile a:hover{color:#fff;background:rgba(255,255,255,.04)}
-.theme-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:#fff;border-radius:8px;flex-shrink:0;transition:background .2s}
+.theme-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--nav-fg-strong);border-radius:8px;flex-shrink:0;transition:background .2s,color .2s}
 .theme-toggle:hover{background:rgba(255,255,255,.08)}
+#topnav.scrolled .theme-toggle{color:#fff}
 .theme-toggle svg{width:18px;height:18px}
 .icon-sun{display:none}
 @media (prefers-color-scheme: dark){
